@@ -24,12 +24,12 @@ fire_county_chart <- fire_county %>%
                         fire_county$count_firefactor8+
                         fire_county$count_firefactor9+
                         fire_county$count_firefactor10)/
-           fire_county$count_property,2),
+           fire_county$count_property*100,2),
          pct_severe = round((fire_county$count_firefactor7+
                         fire_county$count_firefactor8+
                         fire_county$count_firefactor9+
                         fire_county$count_firefactor10)/
-           fire_county$count_property,2)) %>%
+           fire_county$count_property*100,2)) %>%
   select(1,2,3,14,15)
 
 flood_county_chart <- flood_county %>%
@@ -39,12 +39,12 @@ flood_county_chart <- flood_county %>%
                               flood_county$count_floodfactor8+
                               flood_county$count_floodfactor9+
                               flood_county$count_floodfactor10)/
-                             flood_county$count_property,2),
+                             flood_county$count_property*100,2),
          pct_severe = round((flood_county$count_floodfactor7+
                                 flood_county$count_floodfactor8+
                                 flood_county$count_floodfactor9+
                                 flood_county$count_floodfactor10)/
-                               flood_county$count_property,2)) %>%
+                               flood_county$count_property*100,2)) %>%
   select(1,2,3,14,15)
 
 heat_county_chart <- heat_county %>%
@@ -54,12 +54,12 @@ heat_county_chart <- heat_county %>%
                               heat_county$count_heatfactor8+
                               heat_county$count_heatfactor9+
                               heat_county$count_heatfactor10)/
-                             heat_county$count_property,2),
+                             heat_county$count_property*100,2),
          pct_severe = round((heat_county$count_heatfactor7+
                                 heat_county$count_heatfactor8+
                                 heat_county$count_heatfactor9+
                                 heat_county$count_heatfactor10)/
-                               heat_county$count_property,2)) %>%
+                               heat_county$count_property*100,2)) %>%
   select(1,2,3,14,15)
 
 flood_county_chart %>% write_csv("data_tables/flood_county_chart.csv")
