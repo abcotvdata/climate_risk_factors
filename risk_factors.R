@@ -66,6 +66,115 @@ flood_county_chart %>% write_csv("data_tables/flood_county_chart.csv")
 heat_county_chart %>% write_csv("data_tables/heat_county_chart.csv")
 fire_county_chart %>% write_csv("data_tables/fire_county_chart.csv")
 
+# BY CENSUS TRACT
+# Create a simple table of county percentages above a certain level
+
+fire_tract_chart <- fire_tract %>%
+  mutate(pct_major = round((fire_tract$count_firefactor5+
+                              fire_tract$count_firefactor6+
+                              fire_tract$count_firefactor7+
+                              fire_tract$count_firefactor8+
+                              fire_tract$count_firefactor9+
+                              fire_tract$count_firefactor10)/
+                             fire_tract$count_property*100,2),
+         pct_severe = round((fire_tract$count_firefactor7+
+                               fire_tract$count_firefactor8+
+                               fire_tract$count_firefactor9+
+                               fire_tract$count_firefactor10)/
+                              fire_tract$count_property*100,2)) %>%
+  select(1,2,13,14)
+
+flood_tract_chart <- flood_tract %>%
+  mutate(pct_major = round((flood_tract$count_floodfactor5+
+                              flood_tract$count_floodfactor6+
+                              flood_tract$count_floodfactor7+
+                              flood_tract$count_floodfactor8+
+                              flood_tract$count_floodfactor9+
+                              flood_tract$count_floodfactor10)/
+                             flood_tract$count_property*100,2),
+         pct_severe = round((flood_tract$count_floodfactor7+
+                               flood_tract$count_floodfactor8+
+                               flood_tract$count_floodfactor9+
+                               flood_tract$count_floodfactor10)/
+                              flood_tract$count_property*100,2)) %>%
+  select(1,2,13,14)
+
+heat_tract_chart <- heat_tract %>%
+  mutate(pct_major = round((heat_tract$count_heatfactor5+
+                              heat_tract$count_heatfactor6+
+                              heat_tract$count_heatfactor7+
+                              heat_tract$count_heatfactor8+
+                              heat_tract$count_heatfactor9+
+                              heat_tract$count_heatfactor10)/
+                             heat_tract$count_property*100,2),
+         pct_severe = round((heat_tract$count_heatfactor7+
+                               heat_tract$count_heatfactor8+
+                               heat_tract$count_heatfactor9+
+                               heat_tract$count_heatfactor10)/
+                              heat_tract$count_property*100,2)) %>%
+  select(1,2,13,14)
+
+flood_tract_chart %>% write_csv("data_tables/flood_tract_chart.csv")
+heat_tract_chart %>% write_csv("data_tables/heat_tract_chart.csv")
+fire_tract_chart %>% write_csv("data_tables/fire_tract_chart.csv")
+
+
+# BY ZIP
+# Create a simple table of county percentages above a certain level
+
+fire_zip_chart <- fire_zip %>%
+  mutate(pct_major = round((fire_zip$count_firefactor5+
+                              fire_zip$count_firefactor6+
+                              fire_zip$count_firefactor7+
+                              fire_zip$count_firefactor8+
+                              fire_zip$count_firefactor9+
+                              fire_zip$count_firefactor10)/
+                             fire_zip$count_property*100,2),
+         pct_severe = round((fire_zip$count_firefactor7+
+                               fire_zip$count_firefactor8+
+                               fire_zip$count_firefactor9+
+                               fire_zip$count_firefactor10)/
+                              fire_zip$count_property*100,2)) %>%
+  select(1,2,13,14)
+
+flood_zip_chart <- flood_zip %>%
+  mutate(pct_major = round((flood_zip$count_floodfactor5+
+                              flood_zip$count_floodfactor6+
+                              flood_zip$count_floodfactor7+
+                              flood_zip$count_floodfactor8+
+                              flood_zip$count_floodfactor9+
+                              flood_zip$count_floodfactor10)/
+                             flood_zip$count_property*100,2),
+         pct_severe = round((flood_zip$count_floodfactor7+
+                               flood_zip$count_floodfactor8+
+                               flood_zip$count_floodfactor9+
+                               flood_zip$count_floodfactor10)/
+                              flood_zip$count_property*100,2)) %>%
+  select(1,2,13,14)
+
+heat_zip_chart <- heat_zip %>%
+  mutate(pct_major = round((heat_zip$count_heatfactor5+
+                              heat_zip$count_heatfactor6+
+                              heat_zip$count_heatfactor7+
+                              heat_zip$count_heatfactor8+
+                              heat_zip$count_heatfactor9+
+                              heat_zip$count_heatfactor10)/
+                             heat_zip$count_property*100,2),
+         pct_severe = round((heat_zip$count_heatfactor7+
+                               heat_zip$count_heatfactor8+
+                               heat_zip$count_heatfactor9+
+                               heat_zip$count_heatfactor10)/
+                              heat_zip$count_property*100,2)) %>%
+  select(1,2,13,14)
+
+flood_zip_chart %>% write_csv("data_tables/flood_zip_chart.csv")
+heat_zip_chart %>% write_csv("data_tables/heat_zip_chart.csv")
+fire_zip_chart %>% write_csv("data_tables/fire_zip_chart.csv")
+
+
+
+
+
 
 
 
