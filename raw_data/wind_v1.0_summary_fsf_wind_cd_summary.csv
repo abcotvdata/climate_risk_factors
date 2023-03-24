@@ -1,0 +1,434 @@
+fips,name,count_property,count_windfactor1,count_windfactor2,count_windfactor3,count_windfactor4,count_windfactor5,count_windfactor6,count_windfactor7,count_windfactor8,count_windfactor9,count_windfactor10
+0101,Alabama Congressional District 1,431417,0,0,0,0,0,0,0,121794,298968,10655
+0102,Alabama Congressional District 2,442153,0,0,0,0,0,139484,1264,293276,8129,0
+0103,Alabama Congressional District 3,470546,0,0,0,158797,29906,277088,917,3838,0,0
+0104,Alabama Congressional District 4,506717,0,0,1866,364933,54923,84932,25,38,0,0
+0105,Alabama Congressional District 5,373613,0,0,6793,357976,6835,2009,0,0,0,0
+0106,Alabama Congressional District 6,364624,0,0,0,87562,20558,255877,112,515,0,0
+0107,Alabama Congressional District 7,430230,0,0,0,5268,11274,330288,4648,78751,1,0
+0501,Arkansas Congressional District 1,546068,0,225383,120568,170831,5072,24101,24,89,0,0
+0502,Arkansas Congressional District 2,411270,0,99071,278426,33769,1,3,0,0,0,0
+0503,Arkansas Congressional District 3,422252,0,421928,321,3,0,0,0,0,0,0
+0504,Arkansas Congressional District 4,543966,0,137555,103183,196751,13107,93304,31,35,0,0
+0401,Arizona Congressional District 1,482532,482532,0,0,0,0,0,0,0,0,0
+0402,Arizona Congressional District 2,372472,372472,0,0,0,0,0,0,0,0,0
+0403,Arizona Congressional District 3,319773,319773,0,0,0,0,0,0,0,0,0
+0404,Arizona Congressional District 4,635309,635309,0,0,0,0,0,0,0,0,0
+0405,Arizona Congressional District 5,325975,325975,0,0,0,0,0,0,0,0,0
+0406,Arizona Congressional District 6,314253,314253,0,0,0,0,0,0,0,0,0
+0407,Arizona Congressional District 7,205525,205525,0,0,0,0,0,0,0,0,0
+0408,Arizona Congressional District 8,334279,334279,0,0,0,0,0,0,0,0,0
+0409,Arizona Congressional District 9,235645,235645,0,0,0,0,0,0,0,0,0
+0601,California Congressional District 1,452105,452105,0,0,0,0,0,0,0,0,0
+0602,California Congressional District 2,347469,347469,0,0,0,0,0,0,0,0,0
+0603,California Congressional District 3,288997,288997,0,0,0,0,0,0,0,0,0
+0604,California Congressional District 4,446196,446196,0,0,0,0,0,0,0,0,0
+0605,California Congressional District 5,254958,254958,0,0,0,0,0,0,0,0,0
+0606,California Congressional District 6,213711,213711,0,0,0,0,0,0,0,0,0
+0607,California Congressional District 7,241512,241512,0,0,0,0,0,0,0,0,0
+0608,California Congressional District 8,476500,476500,0,0,0,0,0,0,0,0,0
+0609,California Congressional District 9,244112,244112,0,0,0,0,0,0,0,0,0
+0610,California Congressional District 10,230334,230334,0,0,0,0,0,0,0,0,0
+0611,California Congressional District 11,232465,232465,0,0,0,0,0,0,0,0,0
+0612,California Congressional District 12,130895,130895,0,0,0,0,0,0,0,0,0
+0613,California Congressional District 13,176707,176707,0,0,0,0,0,0,0,0,0
+0614,California Congressional District 14,184372,184372,0,0,0,0,0,0,0,0,0
+0615,California Congressional District 15,204906,204906,0,0,0,0,0,0,0,0,0
+0616,California Congressional District 16,210280,210280,0,0,0,0,0,0,0,0,0
+0617,California Congressional District 17,181443,181443,0,0,0,0,0,0,0,0,0
+0618,California Congressional District 18,222893,222893,0,0,0,0,0,0,0,0,0
+0619,California Congressional District 19,176926,176926,0,0,0,0,0,0,0,0,0
+0620,California Congressional District 20,213358,213358,0,0,0,0,0,0,0,0,0
+0621,California Congressional District 21,220468,220468,0,0,0,0,0,0,0,0,0
+0622,California Congressional District 22,245760,245760,0,0,0,0,0,0,0,0,0
+0623,California Congressional District 23,394309,394309,0,0,0,0,0,0,0,0,0
+0624,California Congressional District 24,265163,265163,0,0,0,0,0,0,0,0,0
+0625,California Congressional District 25,265806,265806,0,0,0,0,0,0,0,0,0
+0626,California Congressional District 26,212630,212630,0,0,0,0,0,0,0,0,0
+0627,California Congressional District 27,175599,175599,0,0,0,0,0,0,0,0,0
+0628,California Congressional District 28,149113,149113,0,0,0,0,0,0,0,0,0
+0629,California Congressional District 29,107855,107855,0,0,0,0,0,0,0,0,0
+0630,California Congressional District 30,165797,165797,0,0,0,0,0,0,0,0,0
+0631,California Congressional District 31,198845,198845,0,0,0,0,0,0,0,0,0
+0632,California Congressional District 32,151935,151935,0,0,0,0,0,0,0,0,0
+0633,California Congressional District 33,181478,181478,0,0,0,0,0,0,0,0,0
+0634,California Congressional District 34,88173,88173,0,0,0,0,0,0,0,0,0
+0635,California Congressional District 35,175278,175278,0,0,0,0,0,0,0,0,0
+0636,California Congressional District 36,370396,370396,0,0,0,0,0,0,0,0,0
+0637,California Congressional District 37,127045,127045,0,0,0,0,0,0,0,0,0
+0638,California Congressional District 38,163936,163936,0,0,0,0,0,0,0,0,0
+0639,California Congressional District 39,183484,183484,0,0,0,0,0,0,0,0,0
+0640,California Congressional District 40,103407,103407,0,0,0,0,0,0,0,0,0
+0641,California Congressional District 41,197403,197403,0,0,0,0,0,0,0,0,0
+0642,California Congressional District 42,290610,290610,0,0,0,0,0,0,0,0,0
+0643,California Congressional District 43,128915,128915,0,0,0,0,0,0,0,0,0
+0644,California Congressional District 44,132229,132229,0,0,0,0,0,0,0,0,0
+0645,California Congressional District 45,180661,180661,0,0,0,0,0,0,0,0,0
+0646,California Congressional District 46,101582,101582,0,0,0,0,0,0,0,0,0
+0647,California Congressional District 47,146501,146501,0,0,0,0,0,0,0,0,0
+0648,California Congressional District 48,176293,176293,0,0,0,0,0,0,0,0,0
+0649,California Congressional District 49,194211,194211,0,0,0,0,0,0,0,0,0
+0650,California Congressional District 50,209375,209375,0,0,0,0,0,0,0,0,0
+0651,California Congressional District 51,178130,178130,0,0,0,0,0,0,0,0,0
+0652,California Congressional District 52,166213,166213,0,0,0,0,0,0,0,0,0
+0653,California Congressional District 53,162644,162644,0,0,0,0,0,0,0,0,0
+0801,Colorado Congressional District 1,232960,0,232960,0,0,0,0,0,0,0,0
+0802,Colorado Congressional District 2,385812,333085,52727,0,0,0,0,0,0,0,0
+0803,Colorado Congressional District 3,551221,450073,101148,0,0,0,0,0,0,0,0
+0804,Colorado Congressional District 4,408006,31795,376211,0,0,0,0,0,0,0,0
+0805,Colorado Congressional District 5,356581,44881,311700,0,0,0,0,0,0,0,0
+0806,Colorado Congressional District 6,280890,0,280890,0,0,0,0,0,0,0,0
+0807,Colorado Congressional District 7,276140,0,276140,0,0,0,0,0,0,0,0
+0901,Connecticut Congressional District 1,210043,0,0,0,18281,17152,174610,0,0,0,0
+0902,Connecticut Congressional District 2,281298,0,0,0,931,17172,208771,4609,49815,0,0
+0903,Connecticut Congressional District 3,215043,0,0,0,103,3921,209384,387,1248,0,0
+0904,Connecticut Congressional District 4,205828,0,0,0,17888,11140,174883,459,1458,0,0
+0905,Connecticut Congressional District 5,239946,0,0,428,114411,43115,81992,0,0,0,0
+1198,District of Columbia Delegate District (at Large),136539,0,0,0,136501,29,9,0,0,0,0
+1000,Delaware Congressional District (at Large),423020,0,0,0,0,6324,296580,10639,109477,0,0
+1201,Florida Congressional District 1,429796,0,0,0,0,0,0,0,50243,374162,5391
+1202,Florida Congressional District 2,550738,0,0,0,0,0,0,0,90970,428709,31059
+1203,Florida Congressional District 3,393236,0,0,0,0,0,0,0,3782,387272,2182
+1204,Florida Congressional District 4,359493,0,0,0,0,0,0,0,15602,327101,16790
+1205,Florida Congressional District 5,314959,0,0,0,0,0,0,0,91081,223207,671
+1206,Florida Congressional District 6,414143,0,0,0,0,0,0,0,0,236711,177432
+1207,Florida Congressional District 7,261122,0,0,0,0,0,0,0,0,257430,3692
+1208,Florida Congressional District 8,388212,0,0,0,0,0,0,0,0,6448,381764
+1209,Florida Congressional District 9,436118,0,0,0,0,0,0,0,0,425475,10643
+1210,Florida Congressional District 10,260375,0,0,0,0,0,0,0,0,259067,1308
+1211,Florida Congressional District 11,561101,0,0,0,0,0,0,0,0,549391,11710
+1212,Florida Congressional District 12,353023,0,0,0,0,0,0,0,0,262445,90578
+1213,Florida Congressional District 13,230809,0,0,0,0,0,0,0,0,3413,227396
+1214,Florida Congressional District 14,234291,0,0,0,0,0,0,0,0,229812,4479
+1215,Florida Congressional District 15,308874,0,0,0,0,0,0,0,0,306689,2185
+1216,Florida Congressional District 16,349962,0,0,0,0,0,0,0,0,226871,123091
+1217,Florida Congressional District 17,666937,0,0,0,0,0,0,0,0,391316,275621
+1218,Florida Congressional District 18,344397,0,0,0,0,0,0,0,0,3027,341370
+1219,Florida Congressional District 19,446545,0,0,0,0,0,0,0,0,39609,406936
+1220,Florida Congressional District 20,199138,0,0,0,0,0,0,0,0,859,198279
+1221,Florida Congressional District 21,231444,0,0,0,0,0,0,0,0,0,231444
+1222,Florida Congressional District 22,217914,0,0,0,0,0,0,0,0,0,217914
+1223,Florida Congressional District 23,196495,0,0,0,0,0,0,0,0,0,196495
+1224,Florida Congressional District 24,159611,0,0,0,0,0,0,0,0,0,159611
+1225,Florida Congressional District 25,251089,0,0,0,0,0,0,0,0,60213,190876
+1226,Florida Congressional District 26,268036,0,0,0,0,0,0,0,0,1069,266967
+1227,Florida Congressional District 27,147421,0,0,0,0,0,0,0,0,0,147421
+1301,Georgia Congressional District 1,356442,0,0,0,0,0,0,0,242194,113860,388
+1302,Georgia Congressional District 2,339032,0,0,0,0,0,162600,2214,169959,4259,0
+1303,Georgia Congressional District 3,335210,0,0,0,77660,58791,198694,20,45,0,0
+1304,Georgia Congressional District 4,253522,0,0,0,241025,11386,1111,0,0,0,0
+1305,Georgia Congressional District 5,228259,0,0,0,219472,8751,36,0,0,0,0
+1306,Georgia Congressional District 6,227352,0,0,22,227330,0,0,0,0,0,0
+1307,Georgia Congressional District 7,265745,0,0,8264,257355,113,13,0,0,0,0
+1308,Georgia Congressional District 8,350845,0,0,0,0,100,133864,4224,211333,1324,0
+1309,Georgia Congressional District 9,442665,0,244537,116940,78755,1380,1053,0,0,0,0
+1310,Georgia Congressional District 10,374589,0,0,1710,175337,30315,165035,1387,805,0,0
+1311,Georgia Congressional District 11,274879,0,1972,26880,245937,68,22,0,0,0,0
+1312,Georgia Congressional District 12,351991,0,0,0,0,0,180740,14285,156963,3,0
+1313,Georgia Congressional District 13,281905,0,0,0,245471,31087,5347,0,0,0,0
+1314,Georgia Congressional District 14,331403,0,32745,101415,196427,494,322,0,0,0,0
+1901,Iowa Congressional District 1,534297,0,534297,0,0,0,0,0,0,0,0
+1902,Iowa Congressional District 2,573149,0,573149,0,0,0,0,0,0,0,0
+1903,Iowa Congressional District 3,539823,0,539823,0,0,0,0,0,0,0,0
+1904,Iowa Congressional District 4,779727,0,779727,0,0,0,0,0,0,0,0
+1601,Idaho Congressional District 1,538290,538290,0,0,0,0,0,0,0,0,0
+1602,Idaho Congressional District 2,498635,498635,0,0,0,0,0,0,0,0,0
+1701,Illinois Congressional District 1,238057,0,238057,0,0,0,0,0,0,0,0
+1702,Illinois Congressional District 2,290773,0,290773,0,0,0,0,0,0,0,0
+1703,Illinois Congressional District 3,234896,0,234896,0,0,0,0,0,0,0,0
+1704,Illinois Congressional District 4,146338,0,146338,0,0,0,0,0,0,0,0
+1705,Illinois Congressional District 5,175318,0,175318,0,0,0,0,0,0,0,0
+1706,Illinois Congressional District 6,249520,0,249520,0,0,0,0,0,0,0,0
+1707,Illinois Congressional District 7,166133,0,166133,0,0,0,0,0,0,0,0
+1708,Illinois Congressional District 8,187475,0,187475,0,0,0,0,0,0,0,0
+1709,Illinois Congressional District 9,177949,0,177949,0,0,0,0,0,0,0,0
+1710,Illinois Congressional District 10,221317,0,221317,0,0,0,0,0,0,0,0
+1711,Illinois Congressional District 11,222469,0,222469,0,0,0,0,0,0,0,0
+1712,Illinois Congressional District 12,442834,0,437594,5166,74,0,0,0,0,0,0
+1713,Illinois Congressional District 13,356850,0,356842,8,0,0,0,0,0,0,0
+1714,Illinois Congressional District 14,328224,0,328224,0,0,0,0,0,0,0,0
+1715,Illinois Congressional District 15,570898,0,553298,17384,216,0,0,0,0,0,0
+1716,Illinois Congressional District 16,395331,0,395331,0,0,0,0,0,0,0,0
+1717,Illinois Congressional District 17,393534,0,393534,0,0,0,0,0,0,0,0
+1718,Illinois Congressional District 18,444482,0,444478,4,0,0,0,0,0,0,0
+1801,Indiana Congressional District 1,348020,0,348020,0,0,0,0,0,0,0,0
+1802,Indiana Congressional District 2,388962,0,388962,0,0,0,0,0,0,0,0
+1803,Indiana Congressional District 3,407490,0,407490,0,0,0,0,0,0,0,0
+1804,Indiana Congressional District 4,416036,0,416036,0,0,0,0,0,0,0,0
+1805,Indiana Congressional District 5,368221,0,368221,0,0,0,0,0,0,0,0
+1806,Indiana Congressional District 6,418217,0,418216,1,0,0,0,0,0,0,0
+1807,Indiana Congressional District 7,274190,0,274190,0,0,0,0,0,0,0,0
+1808,Indiana Congressional District 8,485839,0,476178,9657,4,0,0,0,0,0,0
+1809,Indiana Congressional District 9,405416,0,405166,248,2,0,0,0,0,0,0
+2001,Kansas Congressional District 1,525457,0,525457,0,0,0,0,0,0,0,0
+2002,Kansas Congressional District 2,412328,0,411094,1232,2,0,0,0,0,0,0
+2003,Kansas Congressional District 3,312970,0,312970,0,0,0,0,0,0,0,0
+2004,Kansas Congressional District 4,382766,0,382639,127,0,0,0,0,0,0,0
+2101,Kentucky Congressional District 1,462721,0,207040,222126,33555,0,0,0,0,0,0
+2102,Kentucky Congressional District 2,349699,0,317045,31367,1287,0,0,0,0,0,0
+2103,Kentucky Congressional District 3,276147,0,276146,1,0,0,0,0,0,0,0
+2104,Kentucky Congressional District 4,330121,0,330110,11,0,0,0,0,0,0,0
+2105,Kentucky Congressional District 5,299159,0,294994,4165,0,0,0,0,0,0,0
+2106,Kentucky Congressional District 6,278497,0,274051,4446,0,0,0,0,0,0,0
+2201,Louisiana Congressional District 1,320386,0,0,0,0,0,0,0,14186,279048,27152
+2202,Louisiana Congressional District 2,330789,0,0,0,0,0,0,0,36564,273824,20401
+2203,Louisiana Congressional District 3,478022,0,0,0,0,0,0,0,30060,439324,8638
+2204,Louisiana Congressional District 4,453528,0,0,0,0,0,307266,3155,112287,30820,0
+2205,Louisiana Congressional District 5,431183,0,0,0,0,0,156356,9962,245072,19793,0
+2206,Louisiana Congressional District 6,351288,0,0,0,0,0,0,0,124104,225507,1677
+2501,Massachusetts Congressional District 1,296621,0,1245,53171,165142,50002,27061,0,0,0,0
+2502,Massachusetts Congressional District 2,265867,0,0,377,93600,31393,140493,3,1,0,0
+2503,Massachusetts Congressional District 3,222801,0,0,0,47015,29978,145808,0,0,0,0
+2504,Massachusetts Congressional District 4,239330,0,0,0,0,0,235686,431,3213,0,0
+2505,Massachusetts Congressional District 5,198229,0,0,0,0,0,197523,11,695,0,0
+2506,Massachusetts Congressional District 6,239953,0,0,0,93,362,220081,94,19323,0,0
+2507,Massachusetts Congressional District 7,112884,0,0,0,0,0,112760,0,124,0,0
+2508,Massachusetts Congressional District 8,218672,0,0,0,0,0,202707,998,14967,0,0
+2509,Massachusetts Congressional District 9,387954,0,0,0,0,0,63966,7830,315808,350,0
+2401,Maryland Congressional District 1,376885,0,11,8165,91813,30169,168229,12875,65623,0,0
+2402,Maryland Congressional District 2,251135,0,0,2,79947,18681,152274,125,106,0,0
+2403,Maryland Congressional District 3,241307,0,0,40,98627,13640,128387,297,316,0,0
+2404,Maryland Congressional District 4,220639,0,0,0,152053,4081,64381,82,42,0,0
+2405,Maryland Congressional District 5,302820,0,0,0,166186,17988,113276,2355,3015,0,0
+2406,Maryland Congressional District 6,297309,0,130679,80166,86464,0,0,0,0,0,0
+2407,Maryland Congressional District 7,258469,0,0,647,145428,44680,67714,0,0,0,0
+2408,Maryland Congressional District 8,243970,0,11003,50359,182608,0,0,0,0,0,0
+2301,Maine Congressional District 1,348565,0,2173,35955,87080,4438,210940,1992,5987,0,0
+2302,Maine Congressional District 2,338921,1,50647,93079,83574,15457,85229,3152,7782,0,0
+2601,Michigan Congressional District 1,600453,600453,0,0,0,0,0,0,0,0,0
+2602,Michigan Congressional District 2,337213,190668,146545,0,0,0,0,0,0,0,0
+2603,Michigan Congressional District 3,287533,2361,285172,0,0,0,0,0,0,0,0
+2604,Michigan Congressional District 4,419137,349905,69232,0,0,0,0,0,0,0,0
+2605,Michigan Congressional District 5,324924,135275,189649,0,0,0,0,0,0,0,0
+2606,Michigan Congressional District 6,367806,0,367806,0,0,0,0,0,0,0,0
+2607,Michigan Congressional District 7,337908,0,337908,0,0,0,0,0,0,0,0
+2608,Michigan Congressional District 8,278104,0,278104,0,0,0,0,0,0,0,0
+2609,Michigan Congressional District 9,253918,168950,84968,0,0,0,0,0,0,0,0
+2610,Michigan Congressional District 10,307888,307888,0,0,0,0,0,0,0,0,0
+2611,Michigan Congressional District 11,239169,0,239169,0,0,0,0,0,0,0,0
+2612,Michigan Congressional District 12,242200,0,242200,0,0,0,0,0,0,0,0
+2613,Michigan Congressional District 13,342273,0,342273,0,0,0,0,0,0,0,0
+2614,Michigan Congressional District 14,297224,0,297224,0,0,0,0,0,0,0,0
+2701,Minnesota Congressional District 1,384847,0,384847,0,0,0,0,0,0,0,0
+2702,Minnesota Congressional District 2,271892,0,271892,0,0,0,0,0,0,0,0
+2703,Minnesota Congressional District 3,245972,0,245972,0,0,0,0,0,0,0,0
+2704,Minnesota Congressional District 4,217981,0,217981,0,0,0,0,0,0,0,0
+2705,Minnesota Congressional District 5,192720,0,192720,0,0,0,0,0,0,0,0
+2706,Minnesota Congressional District 6,307752,0,307752,0,0,0,0,0,0,0,0
+2707,Minnesota Congressional District 7,574399,159165,415234,0,0,0,0,0,0,0,0
+2708,Minnesota Congressional District 8,769145,718556,50589,0,0,0,0,0,0,0,0
+2901,Missouri Congressional District 1,287884,0,287884,0,0,0,0,0,0,0,0
+2902,Missouri Congressional District 2,281980,0,281980,0,0,0,0,0,0,0,0
+2903,Missouri Congressional District 3,437054,0,437051,3,0,0,0,0,0,0,0
+2904,Missouri Congressional District 4,462720,0,462704,16,0,0,0,0,0,0,0
+2905,Missouri Congressional District 5,341616,0,341616,0,0,0,0,0,0,0,0
+2906,Missouri Congressional District 6,463274,0,463274,0,0,0,0,0,0,0,0
+2907,Missouri Congressional District 7,412101,0,412045,56,0,0,0,0,0,0,0
+2908,Missouri Congressional District 8,504873,0,419290,54073,31510,0,0,0,0,0,0
+2801,Mississippi Congressional District 1,462772,0,0,4,288695,34221,139746,30,76,0,0
+2802,Mississippi Congressional District 2,466227,0,0,30,56907,12093,321154,24147,51896,0,0
+2803,Mississippi Congressional District 3,495787,0,0,0,0,0,207988,40842,246675,282,0
+2804,Mississippi Congressional District 4,479708,0,0,0,0,0,0,27,223227,253627,2827
+3000,Montana Congressional District (at Large),894052,826951,67101,0,0,0,0,0,0,0,0
+3701,North Carolina Congressional District 1,400969,0,0,0,5832,52539,246304,25635,70302,357,0
+3702,North Carolina Congressional District 2,420335,0,0,0,0,1107,414194,3800,1234,0,0
+3703,North Carolina Congressional District 3,506542,0,0,0,0,0,2432,9079,401427,93604,0
+3704,North Carolina Congressional District 4,274454,0,0,0,20241,27985,226225,2,1,0,0
+3705,North Carolina Congressional District 5,462543,0,323964,114854,23725,0,0,0,0,0,0
+3706,North Carolina Congressional District 6,403481,0,7889,54569,244890,44212,51921,0,0,0,0
+3707,North Carolina Congressional District 7,542350,0,0,0,0,0,59259,22122,356494,104475,0
+3708,North Carolina Congressional District 8,399647,0,0,1779,141801,34637,219679,1185,566,0,0
+3709,North Carolina Congressional District 9,390798,0,0,0,7614,97921,206281,24496,54486,0,0
+3710,North Carolina Congressional District 10,431791,0,256154,61515,112447,1647,28,0,0,0,0
+3711,North Carolina Congressional District 11,558314,0,558314,0,0,0,0,0,0,0,0
+3712,North Carolina Congressional District 12,286535,0,0,420,173301,102999,9815,0,0,0,0
+3713,North Carolina Congressional District 13,373519,0,59286,72414,241388,367,64,0,0,0,0
+3800,North Dakota Congressional District (at Large),679023,338621,340402,0,0,0,0,0,0,0,0
+3101,Nebraska Congressional District 1,327804,0,327804,0,0,0,0,0,0,0,0
+3102,Nebraska Congressional District 2,245645,0,245645,0,0,0,0,0,0,0,0
+3103,Nebraska Congressional District 3,564742,5112,559630,0,0,0,0,0,0,0,0
+3301,New Hampshire Congressional District 1,280095,0,29377,51961,145262,7515,44854,19,1107,0,0
+3302,New Hampshire Congressional District 2,300570,0,91532,61690,126450,13712,7186,0,0,0,0
+3401,New Jersey Congressional District 1,286876,0,0,0,0,0,286829,45,2,0,0
+3402,New Jersey Congressional District 2,510595,0,0,0,0,0,224272,14886,271437,0,0
+3403,New Jersey Congressional District 3,493280,0,0,0,0,0,409073,29564,54643,0,0
+3404,New Jersey Congressional District 4,314842,0,0,0,0,0,238962,14692,61188,0,0
+3405,New Jersey Congressional District 5,285832,0,1304,13595,199176,54990,16767,0,0,0,0
+3406,New Jersey Congressional District 6,241544,0,0,0,437,10930,202206,3165,24806,0,0
+3407,New Jersey Congressional District 7,275067,0,0,0,106266,61571,107230,0,0,0,0
+3408,New Jersey Congressional District 8,144830,0,0,0,1,13058,131761,0,10,0,0
+3409,New Jersey Congressional District 9,183761,0,0,0,64052,66063,53646,0,0,0,0
+3410,New Jersey Congressional District 10,162953,0,0,0,2142,36747,124064,0,0,0,0
+3411,New Jersey Congressional District 11,264477,0,0,16,189551,55166,19744,0,0,0,0
+3412,New Jersey Congressional District 12,285484,0,0,0,407,19700,265377,0,0,0,0
+3501,New Mexico Congressional District 1,305418,305418,0,0,0,0,0,0,0,0,0
+3502,New Mexico Congressional District 2,713007,573948,139059,0,0,0,0,0,0,0,0
+3503,New Mexico Congressional District 3,476967,404471,72496,0,0,0,0,0,0,0,0
+3201,Nevada Congressional District 1,172590,172590,0,0,0,0,0,0,0,0,0
+3202,Nevada Congressional District 2,359679,359679,0,0,0,0,0,0,0,0,0
+3203,Nevada Congressional District 3,334739,334739,0,0,0,0,0,0,0,0,0
+3204,Nevada Congressional District 4,342300,342300,0,0,0,0,0,0,0,0,0
+3601,New York Congressional District 1,329469,0,0,0,0,0,165016,3087,161366,0,0
+3602,New York Congressional District 2,222382,0,0,0,0,0,218298,395,3689,0,0
+3603,New York Congressional District 3,224395,0,0,0,0,0,211530,6358,6507,0,0
+3604,New York Congressional District 4,210359,0,0,0,0,0,207098,846,2415,0,0
+3605,New York Congressional District 5,137999,0,0,0,0,0,136238,176,1585,0,0
+3606,New York Congressional District 6,98879,0,0,0,0,0,98879,0,0,0,0
+3607,New York Congressional District 7,64838,0,0,0,1,0,64836,1,0,0,0
+3608,New York Congressional District 8,92560,0,0,0,0,0,92128,88,344,0,0
+3609,New York Congressional District 9,73453,0,0,0,0,0,73453,0,0,0,0
+3610,New York Congressional District 10,46000,0,0,0,9197,295,36508,0,0,0,0
+3611,New York Congressional District 11,157365,0,0,0,0,419,156824,13,109,0,0
+3612,New York Congressional District 12,34960,0,0,0,12775,409,21776,0,0,0,0
+3613,New York Congressional District 13,17855,0,0,0,13790,2277,1788,0,0,0,0
+3614,New York Congressional District 14,73978,0,0,0,11510,8256,54212,0,0,0,0
+3615,New York Congressional District 15,31648,0,0,0,14766,12281,4601,0,0,0,0
+3616,New York Congressional District 16,122835,0,0,0,23036,40592,59192,3,12,0,0
+3617,New York Congressional District 17,196838,0,0,0,157946,14148,24744,0,0,0,0
+3618,New York Congressional District 18,253032,0,3307,79175,164284,3588,2678,0,0,0,0
+3619,New York Congressional District 19,425724,7348,248923,140251,29049,47,106,0,0,0,0
+3620,New York Congressional District 20,271803,0,229846,41956,1,0,0,0,0,0,0
+3621,New York Congressional District 21,436350,241383,193525,1432,10,0,0,0,0,0,0
+3622,New York Congressional District 22,338260,134242,204018,0,0,0,0,0,0,0,0
+3623,New York Congressional District 23,385008,334693,50315,0,0,0,0,0,0,0,0
+3624,New York Congressional District 24,288505,260638,27867,0,0,0,0,0,0,0,0
+3625,New York Congressional District 25,252060,248930,3130,0,0,0,0,0,0,0,0
+3626,New York Congressional District 26,266645,266645,0,0,0,0,0,0,0,0,0
+3627,New York Congressional District 27,323413,320606,2807,0,0,0,0,0,0,0,0
+3901,Ohio Congressional District 1,343153,0,343153,0,0,0,0,0,0,0,0
+3902,Ohio Congressional District 2,415171,0,415168,3,0,0,0,0,0,0,0
+3903,Ohio Congressional District 3,243621,0,243621,0,0,0,0,0,0,0,0
+3904,Ohio Congressional District 4,418461,76123,342338,0,0,0,0,0,0,0,0
+3905,Ohio Congressional District 5,421770,0,421770,0,0,0,0,0,0,0,0
+3906,Ohio Congressional District 6,603057,374033,229024,0,0,0,0,0,0,0,0
+3907,Ohio Congressional District 7,438077,277652,160425,0,0,0,0,0,0,0,0
+3908,Ohio Congressional District 8,345333,0,345333,0,0,0,0,0,0,0,0
+3909,Ohio Congressional District 9,341426,167009,174417,0,0,0,0,0,0,0,0
+3910,Ohio Congressional District 10,362363,0,362363,0,0,0,0,0,0,0,0
+3911,Ohio Congressional District 11,300599,300599,0,0,0,0,0,0,0,0,0
+3912,Ohio Congressional District 12,356974,0,356974,0,0,0,0,0,0,0,0
+3913,Ohio Congressional District 13,411303,411288,15,0,0,0,0,0,0,0,0
+3914,Ohio Congressional District 14,365698,365684,14,0,0,0,0,0,0,0,0
+3915,Ohio Congressional District 15,383561,14760,368801,0,0,0,0,0,0,0,0
+3916,Ohio Congressional District 16,311390,254347,57043,0,0,0,0,0,0,0,0
+4001,Oklahoma Congressional District 1,349716,0,339607,10073,36,0,0,0,0,0,0
+4002,Oklahoma Congressional District 2,543730,0,331226,127692,82198,1561,1053,0,0,0,0
+4003,Oklahoma Congressional District 3,562871,0,507226,55175,470,0,0,0,0,0,0
+4004,Oklahoma Congressional District 4,410100,0,232160,139105,38817,4,14,0,0,0,0
+4005,Oklahoma Congressional District 5,339316,0,307243,30827,1246,0,0,0,0,0,0
+4101,Oregon Congressional District 1,316593,316593,0,0,0,0,0,0,0,0,0
+4102,Oregon Congressional District 2,479582,479582,0,0,0,0,0,0,0,0,0
+4103,Oregon Congressional District 3,292040,292040,0,0,0,0,0,0,0,0,0
+4104,Oregon Congressional District 4,376927,376927,0,0,0,0,0,0,0,0,0
+4105,Oregon Congressional District 5,342194,342194,0,0,0,0,0,0,0,0,0
+4201,Pennsylvania Congressional District 1,265403,0,0,0,55543,36826,173034,0,0,0,0
+4202,Pennsylvania Congressional District 2,244830,0,0,0,0,45,244785,0,0,0,0
+4203,Pennsylvania Congressional District 3,256281,0,0,0,0,37,256244,0,0,0,0
+4204,Pennsylvania Congressional District 4,269354,0,0,0,85693,34686,148975,0,0,0,0
+4205,Pennsylvania Congressional District 5,249814,0,0,0,3,1280,248531,0,0,0,0
+4206,Pennsylvania Congressional District 6,258417,0,0,41,165572,53392,39412,0,0,0,0
+4207,Pennsylvania Congressional District 7,270257,0,12,16638,253385,220,2,0,0,0,0
+4208,Pennsylvania Congressional District 8,424850,0,317958,101695,5197,0,0,0,0,0,0
+4209,Pennsylvania Congressional District 9,361370,0,114926,147034,98942,462,6,0,0,0,0
+4210,Pennsylvania Congressional District 10,277925,0,168643,74846,34436,0,0,0,0,0,0
+4211,Pennsylvania Congressional District 11,263218,0,441,24939,232135,4687,1016,0,0,0,0
+4212,Pennsylvania Congressional District 12,366959,16051,349986,916,6,0,0,0,0,0,0
+4213,Pennsylvania Congressional District 13,374555,0,343876,26485,4194,0,0,0,0,0,0
+4214,Pennsylvania Congressional District 14,377927,0,377927,0,0,0,0,0,0,0,0
+4215,Pennsylvania Congressional District 15,440378,126808,313570,0,0,0,0,0,0,0,0
+4216,Pennsylvania Congressional District 16,349636,349460,176,0,0,0,0,0,0,0,0
+4217,Pennsylvania Congressional District 17,340053,7167,332886,0,0,0,0,0,0,0,0
+4218,Pennsylvania Congressional District 18,335507,0,335507,0,0,0,0,0,0,0,0
+4401,Rhode Island Congressional District 1,171927,0,0,0,0,0,130381,561,40985,0,0
+4402,Rhode Island Congressional District 2,211875,0,0,0,0,0,143626,9693,58556,0,0
+4501,South Carolina Congressional District 1,350297,0,0,0,0,0,0,0,214290,135942,65
+4502,South Carolina Congressional District 2,343471,0,0,0,0,0,324852,6715,11904,0,0
+4503,South Carolina Congressional District 3,406039,0,256221,28332,48095,18301,55002,38,50,0,0
+4504,South Carolina Congressional District 4,324249,0,323999,243,7,0,0,0,0,0,0
+4505,South Carolina Congressional District 5,381492,0,40285,18243,59041,88718,157356,9253,8596,0,0
+4506,South Carolina Congressional District 6,377208,0,0,0,0,0,101102,18968,251964,5174,0
+4507,South Carolina Congressional District 7,433335,0,0,0,0,0,103957,19236,289262,20880,0
+4600,South Dakota Congressional District (at Large),666388,0,666388,0,0,0,0,0,0,0,0
+4701,Tennessee Congressional District 1,403668,0,403668,0,0,0,0,0,0,0,0
+4702,Tennessee Congressional District 2,354900,0,354327,573,0,0,0,0,0,0,0
+4703,Tennessee Congressional District 3,375490,0,218978,129003,27509,0,0,0,0,0,0
+4704,Tennessee Congressional District 4,376105,0,42516,219031,114554,1,3,0,0,0,0
+4705,Tennessee Congressional District 5,290845,0,3403,263903,23539,0,0,0,0,0,0
+4706,Tennessee Congressional District 6,426792,0,130330,279079,17383,0,0,0,0,0,0
+4707,Tennessee Congressional District 7,429086,0,2303,183342,242175,1073,193,0,0,0,0
+4708,Tennessee Congressional District 8,365207,0,47,54063,311027,68,2,0,0,0,0
+4709,Tennessee Congressional District 9,256646,0,0,2458,254131,43,14,0,0,0,0
+4801,Texas Congressional District 1,425487,0,0,0,10,120,319157,4902,101206,92,0
+4802,Texas Congressional District 2,258743,0,0,0,0,0,0,0,248023,10720,0
+4803,Texas Congressional District 3,286680,0,0,0,241013,26491,19176,0,0,0,0
+4804,Texas Congressional District 4,506619,0,0,1577,213415,35838,255766,0,23,0,0
+4805,Texas Congressional District 5,400557,0,0,0,28342,11343,350053,2685,8134,0,0
+4806,Texas Congressional District 6,291759,0,0,0,154742,10646,124104,1149,1118,0,0
+4807,Texas Congressional District 7,190374,0,0,0,0,0,0,0,186425,3949,0
+4808,Texas Congressional District 8,451577,0,0,0,0,0,2422,1819,445193,2143,0
+4809,Texas Congressional District 9,192145,0,0,0,0,0,0,0,123799,68346,0
+4810,Texas Congressional District 10,375742,0,0,0,0,0,67880,673,281465,25724,0
+4811,Texas Congressional District 11,490101,0,148977,12275,194296,8562,125590,51,350,0,0
+4812,Texas Congressional District 12,308338,0,0,0,289095,3209,16034,0,0,0,0
+4813,Texas Congressional District 13,459961,0,262896,87167,106765,1648,1485,0,0,0,0
+4814,Texas Congressional District 14,394805,0,0,0,0,0,0,0,11064,354428,29313
+4815,Texas Congressional District 15,311542,0,0,0,0,0,13077,2359,287620,8486,0
+4816,Texas Congressional District 16,305733,305733,0,0,0,0,0,0,0,0,0
+4817,Texas Congressional District 17,336177,0,0,0,0,0,192899,3882,139396,0,0
+4818,Texas Congressional District 18,246393,0,0,0,0,0,0,0,232876,13517,0
+4819,Texas Congressional District 19,411996,0,266753,68528,76479,45,191,0,0,0,0
+4820,Texas Congressional District 20,220105,0,0,0,0,0,217790,1583,732,0,0
+4821,Texas Congressional District 21,363155,0,0,0,1008,3896,345651,4562,8038,0,0
+4822,Texas Congressional District 22,371303,0,0,0,0,0,0,0,161540,209763,0
+4823,Texas Congressional District 23,512440,141082,43008,16028,33559,14143,208528,5243,50849,0,0
+4824,Texas Congressional District 24,201890,0,0,0,183269,14409,4212,0,0,0,0
+4825,Texas Congressional District 25,417054,0,0,0,40570,11250,362905,258,2071,0,0
+4826,Texas Congressional District 26,325036,0,0,1,313332,4530,7173,0,0,0,0
+4827,Texas Congressional District 27,407857,0,0,0,0,0,190,354,103624,295534,8155
+4828,Texas Congressional District 28,308465,0,0,0,0,0,124092,3571,180798,4,0
+4829,Texas Congressional District 29,192211,0,0,0,0,0,0,0,102439,89772,0
+4830,Texas Congressional District 30,227706,0,0,0,80659,20073,126974,0,0,0,0
+4831,Texas Congressional District 31,352109,0,0,0,0,0,317697,687,33725,0,0
+4832,Texas Congressional District 32,207200,0,0,0,89833,64145,53222,0,0,0,0
+4833,Texas Congressional District 33,193809,0,0,0,148750,19165,25894,0,0,0,0
+4834,Texas Congressional District 34,323002,0,0,0,0,0,0,0,209842,112172,988
+4835,Texas Congressional District 35,242683,0,0,0,0,0,172925,10788,58970,0,0
+4836,Texas Congressional District 36,446953,0,0,0,0,0,0,0,233957,209560,3436
+4901,Utah Congressional District 1,379399,379399,0,0,0,0,0,0,0,0,0
+4902,Utah Congressional District 2,397752,397752,0,0,0,0,0,0,0,0,0
+4903,Utah Congressional District 3,295900,295900,0,0,0,0,0,0,0,0,0
+4904,Utah Congressional District 4,290412,290412,0,0,0,0,0,0,0,0,0
+5101,Virginia Congressional District 1,431715,0,0,24252,157989,46347,139176,12487,51464,0,0
+5102,Virginia Congressional District 2,281744,0,0,0,0,0,14651,2917,264023,153,0
+5103,Virginia Congressional District 3,262328,0,0,0,0,0,10951,6739,244638,0,0
+5104,Virginia Congressional District 4,328951,0,0,0,1278,90843,173906,11759,51165,0,0
+5105,Virginia Congressional District 5,513399,0,298197,118110,61739,20034,15317,0,2,0,0
+5106,Virginia Congressional District 6,433759,0,433755,4,0,0,0,0,0,0,0
+5107,Virginia Congressional District 7,353397,0,23106,63442,119896,137633,9320,0,0,0,0
+5108,Virginia Congressional District 8,165629,0,0,0,165013,405,211,0,0,0,0
+5109,Virginia Congressional District 9,505286,0,504489,796,1,0,0,0,0,0,0
+5110,Virginia Congressional District 10,307128,0,74516,120241,112371,0,0,0,0,0,0
+5111,Virginia Congressional District 11,212082,0,0,4279,207800,3,0,0,0,0,0
+5000,Vermont Congressional District (at Large),312308,6123,277473,26659,2053,0,0,0,0,0,0
+5301,Washington Congressional District 1,303447,303447,0,0,0,0,0,0,0,0,0
+5302,Washington Congressional District 2,281584,281584,0,0,0,0,0,0,0,0,0
+5303,Washington Congressional District 3,353776,353776,0,0,0,0,0,0,0,0,0
+5304,Washington Congressional District 4,353121,353121,0,0,0,0,0,0,0,0,0
+5305,Washington Congressional District 5,360372,360372,0,0,0,0,0,0,0,0,0
+5306,Washington Congressional District 6,401203,401203,0,0,0,0,0,0,0,0,0
+5307,Washington Congressional District 7,212636,212636,0,0,0,0,0,0,0,0,0
+5308,Washington Congressional District 8,312632,312632,0,0,0,0,0,0,0,0,0
+5309,Washington Congressional District 9,193673,193673,0,0,0,0,0,0,0,0,0
+5310,Washington Congressional District 10,259325,259325,0,0,0,0,0,0,0,0,0
+5501,Wisconsin Congressional District 1,294745,0,294745,0,0,0,0,0,0,0,0
+5502,Wisconsin Congressional District 2,350471,0,350471,0,0,0,0,0,0,0,0
+5503,Wisconsin Congressional District 3,559443,106528,452915,0,0,0,0,0,0,0,0
+5504,Wisconsin Congressional District 4,185354,0,185354,0,0,0,0,0,0,0,0
+5505,Wisconsin Congressional District 5,276608,0,276608,0,0,0,0,0,0,0,0
+5506,Wisconsin Congressional District 6,412942,49417,363525,0,0,0,0,0,0,0,0
+5507,Wisconsin Congressional District 7,833197,756212,76985,0,0,0,0,0,0,0,0
+5508,Wisconsin Congressional District 8,466386,202274,264112,0,0,0,0,0,0,0,0
+5401,West Virginia Congressional District 1,449598,299519,150079,0,0,0,0,0,0,0,0
+5402,West Virginia Congressional District 2,453414,61840,390705,869,0,0,0,0,0,0,0
+5403,West Virginia Congressional District 3,529232,175868,353364,0,0,0,0,0,0,0,0
+5600,Wyoming Congressional District (at Large),339209,283837,55372,0,0,0,0,0,0,0,0

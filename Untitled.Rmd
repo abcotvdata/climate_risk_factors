@@ -1,0 +1,53 @@
+---
+title: "Localized Impact Map"
+output: html_document
+date: "2023-03-24"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Testing unstyled tabs for switching maps {.tabset}
+
+### Flood
+```{r goofy, out.width='100%', echo=FALSE}
+floodmap
+```
+
+### Heat
+```{r silly, out.width='100%', echo=FALSE}
+heatmap
+```
+
+### Wind
+```{r silly2, out.width='100%', echo=FALSE}
+windmap
+```
+
+### Wildfire
+```{r silly3, out.width='100%', echo=FALSE}
+firemap
+```
+
+## {-}
+
+
+
+
+## R Markdown
+
+Test text
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
