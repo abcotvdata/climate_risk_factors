@@ -151,6 +151,9 @@ counties <- get_acs(geography = "county",
                     output = 'wide',
                     year = 2021,
                     geometry = TRUE)
+counties <- st_simplify(counties, dTolerance = 100)
+
+
 
 qpal <- colorBin("viridis", counties$populationE, 9)
 
@@ -159,7 +162,7 @@ countymap <- leaflet() %>%
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
   addProviderTiles(providers$Stamen.TonerLabels) %>%
-  addPolygons(data = counties, weight=0.5, smoothFactor = 0.5, fillOpacity = 0.7,
+  addPolygons(data = counties, weight=0.5, smoothFactor = 0.2, fillOpacity = 0.7,
               color = ~qpal(populationE))
 countymap
 

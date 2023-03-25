@@ -8,7 +8,7 @@ date: "2023-03-24"
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-## Testing unstyled tabs for switching maps {.tabset}
+## Testing unstyled tabs for switching maps {.tabset .tabset-pills}
 
 ### Flood
 ```{r goofy, out.width='100%', echo=FALSE}
