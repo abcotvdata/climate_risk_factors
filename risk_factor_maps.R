@@ -156,7 +156,7 @@ counties <- get_acs(geography = "county",
                     output = 'wide',
                     year = 2021,
                     geometry = TRUE)
-counties <- st_simplify(counties, dTolerance = 300)
+counties <- st_simplify(counties, dTolerance = 200)
 
 
 
@@ -175,7 +175,10 @@ firemap_counties <- left_join(counties,fire_county_chart,by=c("GEOID"="fips"))
 
 qpal <- colorBin("viridis", firemap_counties$pct_major, 10)
 
-firemap <- leaflet() %>%
+firemap <- leaflet(options = leafletOptions(zoomControl = FALSE, zoomSnap = 0.5, zoomDelta=0.5)) %>%
+  htmlwidgets::onRender("function(el, x) {
+L.control.zoom({ position: 'topright' }).addTo(this)
+}") %>%
   setView(-95.93, 41.2, zoom = 4) %>% 
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
@@ -185,7 +188,11 @@ firemap <- leaflet() %>%
   addLegend(opacity = 0.7,
             values = firemap_counties$pct_major, 
             pal = qpal,
-            position = "bottomleft")
+            position = "bottomleft") %>% 
+  addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft")) %>%
+  onRender("function(el, x) {
+        $('input.search-input')[0].placeholder = 'Search street, place or zip code'
+        }") 
 firemap
 
 
@@ -194,7 +201,10 @@ heatmap_counties <- left_join(counties,heat_county_chart,by=c("GEOID"="fips"))
 
 qpal <- colorBin("viridis", heatmap_counties$pct_major, 10)
 
-heatmap <- leaflet() %>%
+heatmap <- leaflet(options = leafletOptions(zoomControl = FALSE, zoomSnap = 0.5, zoomDelta=0.5)) %>%
+  htmlwidgets::onRender("function(el, x) {
+L.control.zoom({ position: 'topright' }).addTo(this)
+}") %>%
   setView(-95.93, 41.2, zoom = 4) %>% 
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
@@ -204,7 +214,11 @@ heatmap <- leaflet() %>%
   addLegend(opacity = 0.7,
             values = heatmap_counties$pct_major, 
             pal = qpal,
-            position = "bottomleft")
+            position = "bottomleft") %>% 
+  addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft")) %>%
+  onRender("function(el, x) {
+        $('input.search-input')[1].placeholder = 'Search street, place or zip code'
+        }") 
 heatmap
 
 
@@ -213,7 +227,10 @@ floodmap_counties <- left_join(counties,flood_county_chart,by=c("GEOID"="fips"))
 
 qpal <- colorBin("viridis", floodmap_counties$pct_major, 10)
 
-floodmap <- leaflet() %>%
+floodmap <- leaflet(options = leafletOptions(zoomControl = FALSE, zoomSnap = 0.5, zoomDelta=0.5)) %>%
+  htmlwidgets::onRender("function(el, x) {
+L.control.zoom({ position: 'topright' }).addTo(this)
+}") %>%
   setView(-95.93, 41.2, zoom = 4) %>% 
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
@@ -223,7 +240,11 @@ floodmap <- leaflet() %>%
   addLegend(opacity = 0.7,
             values = floodmap_counties$pct_major, 
             pal = qpal,
-            position = "bottomleft")
+            position = "bottomleft") %>%
+  addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft")) %>%
+  onRender("function(el, x) {
+        $('input.search-input')[2].placeholder = 'Search street, place or zip code'
+        }") 
 floodmap
 
 windmap_counties <- left_join(counties,wind_county_chart,by=c("GEOID"="fips"))
@@ -244,9 +265,9 @@ L.control.zoom({ position: 'topright' }).addTo(this)
             values = windmap_counties$pct_major, 
             pal = qpal,
             position = "bottomleft") %>% 
-  addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft", autoCollapse = T)) %>%
+  addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft")) %>%
   onRender("function(el, x) {
-        $('input.search-input')[0].placeholder = 'Search street, place or zip code'
+        $('input.search-input')[3].placeholder = 'Search street, place or zip code'
         }") 
 windmap
 
