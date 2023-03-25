@@ -4,9 +4,43 @@ output: html_document
 date: "2023-03-24"
 ---
 
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
+
+
+```{css, echo=FALSE}
+
+h1.title {
+  font-family: roboto;
+  color: transparent;
+  font-weight: 700;
+  text-align: left;
+  font-size: 12px;
+  padding: 0px;
+}
+    
+.leaflet-control-search .search-button {
+        display:none;
+}
+
+.leaflet-control-search .search-input {
+        display: block;
+        float: left;
+        border: 3px solid #667f99;
+        border-radius: 5px;
+        width: 300px;
+        height: 30px;
+        font-family: roboto;
+        font-weight: 400;
+        font-size: 18px;
+        padding: 0 18px 0 2px;
+        margin:0px 0 0px 0px
+}
+    
+```
+
 <style>
   .nav-pills>li>a:hover, .nav-pills>li>a:focus, .nav-pills>li.active>a,     .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
-     background-color: green;
+     background-color: #006400;
      }
 </style>
 

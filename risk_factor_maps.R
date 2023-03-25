@@ -3,6 +3,11 @@ library(tidycensus)
 library(leaflet)
 library(sf)
 library(tigris)
+library(leaflet.extras)
+library(leaflet.providers)
+library(htmlwidgets)
+library(htmltools)
+
 
 my_states <- c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")
 
@@ -151,7 +156,7 @@ counties <- get_acs(geography = "county",
                     output = 'wide',
                     year = 2021,
                     geometry = TRUE)
-counties <- st_simplify(counties, dTolerance = 250) %>% st_transform(3857)
+counties <- st_simplify(counties, dTolerance = 300)
 
 
 
@@ -225,7 +230,10 @@ windmap_counties <- left_join(counties,wind_county_chart,by=c("GEOID"="fips"))
 
 qpal <- colorBin("viridis", windmap_counties$pct_major, 10)
 
-windmap <- leaflet() %>%
+windmap <- leaflet(options = leafletOptions(zoomControl = FALSE, zoomSnap = 0.5, zoomDelta=0.5)) %>%
+  htmlwidgets::onRender("function(el, x) {
+L.control.zoom({ position: 'topright' }).addTo(this)
+}") %>%
   setView(-95.93, 41.2, zoom = 4) %>% 
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
@@ -235,7 +243,11 @@ windmap <- leaflet() %>%
   addLegend(opacity = 0.7,
             values = windmap_counties$pct_major, 
             pal = qpal,
-            position = "bottomleft")
+            position = "bottomleft") %>% 
+  addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft", autoCollapse = T)) %>%
+  onRender("function(el, x) {
+        $('input.search-input')[0].placeholder = 'Search street, place or zip code'
+        }") 
 windmap
 
 
