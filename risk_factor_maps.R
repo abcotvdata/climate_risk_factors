@@ -105,7 +105,7 @@ floodmap <- leaflet(floodmap_zips) %>%
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
   addProviderTiles(providers$Stamen.TonerLabels) %>%
-  addPolygons(weight=0.4, smoothFactor = 0.2, fillOpacity = 0.6,
+  addPolygons(weight=0.8, smoothFactor = 0.2, fillOpacity = 0.6,
               color = ~qpal(pct_major))
 floodmap
 
@@ -119,7 +119,7 @@ heatmap <- leaflet(heatmap_zips) %>%
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
   addProviderTiles(providers$Stamen.TonerLabels) %>%
-  addPolygons(weight=0.4, smoothFactor = 0.2, fillOpacity = 0.6,
+  addPolygons(weight=0.8, smoothFactor = 0.2, fillOpacity = 0.6,
               color = ~qpal(pct_major))
 heatmap
 
@@ -132,7 +132,7 @@ windmap <- leaflet(windmap_zips) %>%
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
   addProviderTiles(providers$Stamen.TonerLabels) %>%
-  addPolygons(weight=0.4, smoothFactor = 0.2, fillOpacity = 0.6,
+  addPolygons(weight=0.8, smoothFactor = 0.2, fillOpacity = 0.6,
               color = ~qpal(pct_major)) %>%
   addLegend(opacity = 0.7,
             values = windmap_zips$pct_major, 
@@ -151,7 +151,7 @@ counties <- get_acs(geography = "county",
                     output = 'wide',
                     year = 2021,
                     geometry = TRUE)
-counties <- st_simplify(counties, dTolerance = 100)
+counties <- st_simplify(counties, dTolerance = 250) %>% st_transform(3857)
 
 
 
@@ -176,7 +176,11 @@ firemap <- leaflet() %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
   addProviderTiles(providers$Stamen.TonerLabels) %>%
   addPolygons(data = firemap_counties, weight=0.5, smoothFactor = 0.2, fillOpacity = 0.7,
-              color = ~qpal(pct_major))
+              color = ~qpal(pct_major)) %>%
+  addLegend(opacity = 0.7,
+            values = firemap_counties$pct_major, 
+            pal = qpal,
+            position = "bottomleft")
 firemap
 
 
@@ -190,8 +194,12 @@ heatmap <- leaflet() %>%
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
   addProviderTiles(providers$Stamen.TonerLabels) %>%
-  addPolygons(data = heatmap_counties, weight=0.4, smoothFactor = 0.3, fillOpacity = 0.7,
-              color = ~qpal(pct_major))
+  addPolygons(data = heatmap_counties, weight=0.8, smoothFactor = 0.3, fillOpacity = 0.7,
+              color = ~qpal(pct_major)) %>%
+  addLegend(opacity = 0.7,
+            values = heatmap_counties$pct_major, 
+            pal = qpal,
+            position = "bottomleft")
 heatmap
 
 
@@ -205,8 +213,12 @@ floodmap <- leaflet() %>%
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
   addProviderTiles(providers$Stamen.TonerLabels) %>%
-  addPolygons(data = floodmap_counties, weight=0.4, smoothFactor = 0.2, fillOpacity = 0.7,
-              color = ~qpal(pct_major))
+  addPolygons(data = floodmap_counties, weight=0.8, smoothFactor = 0.2, fillOpacity = 0.7,
+              color = ~qpal(pct_major)) %>%
+  addLegend(opacity = 0.7,
+            values = floodmap_counties$pct_major, 
+            pal = qpal,
+            position = "bottomleft")
 floodmap
 
 windmap_counties <- left_join(counties,wind_county_chart,by=c("GEOID"="fips"))
@@ -218,7 +230,7 @@ windmap <- leaflet() %>%
   addProviderTiles(providers$Esri.WorldTerrain) %>%
   addProviderTiles(providers$Stamen.TonerLines) %>%
   addProviderTiles(providers$Stamen.TonerLabels) %>%
-  addPolygons(data = windmap_counties, weight=0.4, smoothFactor = 0.2, fillOpacity = 0.7,
+  addPolygons(data = windmap_counties, weight=0.8, smoothFactor = 0.2, fillOpacity = 0.7,
               color = ~qpal(pct_major)) %>%
   addLegend(opacity = 0.7,
             values = windmap_counties$pct_major, 
