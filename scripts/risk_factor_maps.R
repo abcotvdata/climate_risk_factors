@@ -191,7 +191,7 @@ L.control.zoom({ position: 'topright' }).addTo(this)
             position = "bottomleft") %>% 
   addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft")) %>%
   onRender("function(el, x) {
-        $('input.search-input')[0].placeholder = 'Search street, place or zip code'
+        $('input.search-input')[3].placeholder = 'Search street, place or zip code'
         }") 
 firemap
 
@@ -243,7 +243,7 @@ L.control.zoom({ position: 'topright' }).addTo(this)
             position = "bottomleft") %>%
   addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft")) %>%
   onRender("function(el, x) {
-        $('input.search-input')[2].placeholder = 'Search street, place or zip code'
+        $('input.search-input')[0].placeholder = 'Search street, place or zip code'
         }") 
 floodmap
 
@@ -267,7 +267,7 @@ L.control.zoom({ position: 'topright' }).addTo(this)
             position = "bottomleft") %>% 
   addSearchOSM(options = searchOptions(collapsed=FALSE, minLength = 3, zoom=13, position="topleft")) %>%
   onRender("function(el, x) {
-        $('input.search-input')[3].placeholder = 'Search street, place or zip code'
+        $('input.search-input')[2].placeholder = 'Search street, place or zip code'
         }") 
 windmap
 
