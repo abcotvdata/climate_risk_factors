@@ -83,6 +83,12 @@ heat_county_chart %>% write_csv("data_tables/heat_county_chart.csv")
 fire_county_chart %>% write_csv("data_tables/fire_county_chart.csv")
 wind_county_chart %>% write_csv("data_tables/wind_county_chart.csv")
 
+# Some early checks on what counties are missing from FSF data
+missing_flood_counties <- counties %>% filter(!counties$GEOID %in% flood_county_chart$fips)
+missing_heat_counties <- counties %>% filter(!counties$GEOID %in% heat_county_chart$fips)
+missing_fire_counties <- counties %>% filter(!counties$GEOID %in% fire_county_chart$fips)
+missing_wind_counties <- counties %>% filter(!counties$GEOID %in% wind_county_chart$fips)
+
 
 # BY CENSUS TRACT
 # Create a simple table of tract percentages above a certain level
@@ -99,8 +105,18 @@ fire_tract_chart <- fire_tract %>%
                                fire_tract$count_firefactor8+
                                fire_tract$count_firefactor9+
                                fire_tract$count_firefactor10)/
-                              fire_tract$count_property*100,1)) %>%
-  select(1,2,13,14)
+                              fire_tract$count_property*100,1),
+         number_major = fire_tract$count_firefactor5+
+                              fire_tract$count_firefactor6+
+                              fire_tract$count_firefactor7+
+                              fire_tract$count_firefactor8+
+                              fire_tract$count_firefactor9+
+                              fire_tract$count_firefactor10,
+         number_severe = fire_tract$count_firefactor7+
+                               fire_tract$count_firefactor8+
+                               fire_tract$count_firefactor9+
+                               fire_tract$count_firefactor10) %>%
+  select(1,2,13,14,15,16)
 
 fire_tract_chart$state <- substr(fire_tract$fips,1,2)
 fire_tract_chart$tract <- substr(fire_tract$fips,3,11)
@@ -118,8 +134,19 @@ flood_tract_chart <- flood_tract %>%
                                flood_tract$count_floodfactor8+
                                flood_tract$count_floodfactor9+
                                flood_tract$count_floodfactor10)/
-                              flood_tract$count_property*100,1)) %>%
-  select(1,2,13,14)
+                              flood_tract$count_property*100,1),
+         number_major = flood_tract$count_floodfactor5+
+           flood_tract$count_floodfactor6+
+           flood_tract$count_floodfactor7+
+           flood_tract$count_floodfactor8+
+           flood_tract$count_floodfactor9+
+           flood_tract$count_floodfactor10,
+         number_severe = flood_tract$count_floodfactor7+
+           flood_tract$count_floodfactor8+
+           flood_tract$count_floodfactor9+
+           flood_tract$count_floodfactor10) %>%
+  select(1,2,13,14,15,16)
+
 
 flood_tract_chart$state <- substr(flood_tract$fips,1,2)
 flood_tract_chart$tract <- substr(flood_tract$fips,3,11)
@@ -137,8 +164,18 @@ heat_tract_chart <- heat_tract %>%
                                heat_tract$count_heatfactor8+
                                heat_tract$count_heatfactor9+
                                heat_tract$count_heatfactor10)/
-                              heat_tract$count_property*100,1)) %>%
-  select(1,2,13,14)
+                              heat_tract$count_property*100,1),
+         number_major = heat_tract$count_heatfactor5+
+           heat_tract$count_heatfactor6+
+           heat_tract$count_heatfactor7+
+           heat_tract$count_heatfactor8+
+           heat_tract$count_heatfactor9+
+           heat_tract$count_heatfactor10,
+         number_severe = heat_tract$count_heatfactor7+
+           heat_tract$count_heatfactor8+
+           heat_tract$count_heatfactor9+
+           heat_tract$count_heatfactor10) %>%
+  select(1,2,13,14,15,16)
 
 heat_tract_chart$state <- substr(heat_tract$fips,1,2)
 heat_tract_chart$tract <- substr(heat_tract$fips,3,11)
@@ -156,21 +193,34 @@ wind_tract_chart <- wind_tract %>%
                                wind_tract$count_windfactor8+
                                wind_tract$count_windfactor9+
                                wind_tract$count_windfactor10)/
-                              wind_tract$count_property*100,1)) %>%
-  select(1,2,13,14)
+                              wind_tract$count_property*100,1),
+         number_major = wind_tract$count_windfactor5+
+           wind_tract$count_windfactor6+
+           wind_tract$count_windfactor7+
+           wind_tract$count_windfactor8+
+           wind_tract$count_windfactor9+
+           wind_tract$count_windfactor10,
+         number_severe = wind_tract$count_windfactor7+
+           wind_tract$count_windfactor8+
+           wind_tract$count_windfactor9+
+           wind_tract$count_windfactor10) %>%
+  select(1,2,13,14,15,16)
 
 wind_tract_chart$state <- substr(wind_tract$fips,1,2)
 wind_tract_chart$tract <- substr(wind_tract$fips,3,11)
-wind_tract_chart$state <- substr(wind_tract$fips,1,5)
+wind_tract_chart$county <- substr(wind_tract$fips,1,5)
 
 flood_tract_chart %>% write_csv("data_tables/flood_tract_chart.csv")
 heat_tract_chart %>% write_csv("data_tables/heat_tract_chart.csv")
 fire_tract_chart %>% write_csv("data_tables/fire_tract_chart.csv")
 wind_tract_chart %>% write_csv("data_tables/wind_tract_chart.csv")
 
+# Data check: verified all counties missing from the county level data also missing from tract-level data
+
 # By state export
 # flood_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/flood_tract_chart.csv")
 # heat_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/heat_tract_chart.csv")
 # fire_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/fire_tract_chart.csv")
 # wind_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/wind_tract_chart.csv")
+
 
