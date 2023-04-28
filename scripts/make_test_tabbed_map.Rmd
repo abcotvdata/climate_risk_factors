@@ -35,14 +35,19 @@ h1.title {
         padding: 0 18px 0 2px;
         margin:0px 0 0px 0px
 }
-    
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:focus, .nav-pills > li.active > a:hover {
+    color: #fff;
+    background-color: darkblue;
+}
+
+a {
+    color: darkblue;
+    text-decoration: none;
+}
+
 ```
 
-<style>
-  .nav-pills>li>a:hover, .nav-pills>li>a:focus, .nav-pills>li.active>a,     .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus{
-     background-color: #006400;
-     }
-</style>
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)

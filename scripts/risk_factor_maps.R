@@ -8,6 +8,9 @@ library(leaflet.providers)
 library(htmlwidgets)
 library(htmltools)
 
+library(MetBrewer)
+
+colors = met.brewer(name="Tam", n=10)
 
 my_states <- c("AL", "AK", "AZ", "AR", "CA", "CO", "CT", "DE", "DC", "FL", "GA", "HI", "ID", "IL", "IN", "IA", "KS", "KY", "LA", "ME", "MD", "MA", "MI", "MN", "MS", "MO", "MT", "NE", "NV", "NH", "NJ", "NM", "NY", "NC", "ND", "OH", "OK", "OR", "PA", "RI", "SC", "SD", "TN", "TX", "UT", "VT", "VA", "WA", "WV", "WI", "WY")
 
@@ -103,7 +106,7 @@ firemap
 
 floodmap_zips <- left_join(zips,flood_zip_chart,by=c("GEOID"="fips"))
 
-qpal <- colorBin("viridis", floodmap_zips$pct_major, 5)
+qpal <- colorBin(c(colors), floodmap_zips$pct_major, 5)
 
 floodmap <- leaflet(floodmap_zips) %>%
   setView(-108, 43.5, zoom = 5) %>% 
@@ -145,13 +148,10 @@ windmap <- leaflet(windmap_zips) %>%
             position = "bottomleft")
 windmap
 
-
-
-
-
 # Get the total population and total number of housing units for each census tract
 counties <- get_acs(geography = "county",
                     variables = my_vars,
+                    state = my_states,
                     survey = "acs5",
                     output = 'wide',
                     year = 2021,
