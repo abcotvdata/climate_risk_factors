@@ -280,4 +280,12 @@ firemap_counties %>% st_write("data_geojson/county_fire_risk.geojson")
 windmap_counties %>% st_write("data_geojson/county_wind_risk.geojson")
 
 
+floodmap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_flood_risk.geojson")
+heatmap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_heat_risk.geojson")
+firemap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_fire_risk.geojson")
+windmap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_wind_risk.geojson")
+
+
+
+
 

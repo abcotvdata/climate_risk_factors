@@ -48,13 +48,15 @@ a {
 
 ```
 
-Do some introductory text here?
+Los Angeles County, California
 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ## Section to choose the kind of local impact {.tabset .tabset-pills}
+
+In Los Angeles County, California, XX percent of properties 
 
 ### Flood
 ```{r goofy, out.width='100%', echo=FALSE}

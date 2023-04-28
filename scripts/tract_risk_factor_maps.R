@@ -120,7 +120,7 @@ L.control.zoom({ position: 'topright' }).addTo(this)
         $('input.search-input')[3].placeholder = 'Search street, place or zip code'
         }") 
 
-floodmap_tracts %>% st_simplify(dTolerance = 200) %>% st_write("data_geojson/tract_flood_risk.geojson")
-heatmap_tracts %>% st_simplify(dTolerance = 200) %>% st_write("data_geojson/tract_heat_risk.geojson")
-firemap_tracts %>% st_simplify(dTolerance = 200) %>% st_write("data_geojson/tract_fire_risk.geojson")
-windmap_tracts %>% st_simplify(dTolerance = 200) %>% st_write("data_geojson/tract_wind_risk.geojson")
+floodmap_tracts %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/tract_flood_risk.geojson")
+heatmap_tracts %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/tract_heat_risk.geojson")
+firemap_tracts %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/tract_fire_risk.geojson")
+windmap_tracts %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/tract_wind_risk.geojson")
