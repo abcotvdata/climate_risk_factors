@@ -83,11 +83,6 @@ heat_county_chart %>% write_csv("data_tables/heat_county_chart.csv")
 fire_county_chart %>% write_csv("data_tables/fire_county_chart.csv")
 wind_county_chart %>% write_csv("data_tables/wind_county_chart.csv")
 
-# Some early checks on what counties are missing from FSF data
-missing_flood_counties <- counties %>% filter(!counties$GEOID %in% flood_county_chart$fips)
-missing_heat_counties <- counties %>% filter(!counties$GEOID %in% heat_county_chart$fips)
-missing_fire_counties <- counties %>% filter(!counties$GEOID %in% fire_county_chart$fips)
-missing_wind_counties <- counties %>% filter(!counties$GEOID %in% wind_county_chart$fips)
 
 
 # BY CENSUS TRACT
@@ -215,8 +210,14 @@ heat_tract_chart %>% write_csv("data_tables/heat_tract_chart.csv")
 fire_tract_chart %>% write_csv("data_tables/fire_tract_chart.csv")
 wind_tract_chart %>% write_csv("data_tables/wind_tract_chart.csv")
 
-# Data check: verified all counties missing from the county level data also missing from tract-level data
 
+## 
+# Data check: verified all counties missing from the county level data also missing from tract-level data
+# Some early checks on what counties are missing from FSF data
+# missing_flood_counties <- counties %>% filter(!counties$GEOID %in% flood_county_chart$fips)
+# missing_heat_counties <- counties %>% filter(!counties$GEOID %in% heat_county_chart$fips)
+# missing_fire_counties <- counties %>% filter(!counties$GEOID %in% fire_county_chart$fips)
+# missing_wind_counties <- counties %>% filter(!counties$GEOID %in% wind_county_chart$fips)
 # By state export
 # flood_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/flood_tract_chart.csv")
 # heat_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/heat_tract_chart.csv")

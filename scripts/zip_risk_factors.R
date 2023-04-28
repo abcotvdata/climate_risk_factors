@@ -15,6 +15,7 @@ flood_zip <- read_csv("raw_data/flood_v2.1_summary_fsf_flood_zcta_summary.csv",
 wind_zip <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_zcta_summary.csv", 
                       col_types = cols(fips = col_character()))
 
+
 # Create a simple table of zip code percentages above a certain level
 
 fire_zip_chart <- fire_zip %>%
