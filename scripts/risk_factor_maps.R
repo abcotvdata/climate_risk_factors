@@ -272,6 +272,21 @@ L.control.zoom({ position: 'topright' }).addTo(this)
 windmap
 
 
+states <- get_acs(geography = "state",
+                    variables = my_vars,
+                    state = my_states,
+                    survey = "acs5",
+                    output = 'wide',
+                    year = 2021,
+                    geometry = TRUE)
+
+windmap_states <- left_join(states,wind_state_chart,by=c("GEOID"="fips"))
+heatmap_states <- left_join(states,heat_state_chart,by=c("GEOID"="fips"))
+floodmap_states <- left_join(states,flood_state_chart,by=c("GEOID"="fips"))
+firemap_states <- left_join(states,fire_state_chart,by=c("GEOID"="fips"))
+
+
+
 
 
 floodmap_counties %>% st_write("data_geojson/county_flood_risk.geojson")
@@ -285,6 +300,10 @@ heatmap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_h
 firemap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_fire_risk.geojson")
 windmap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_wind_risk.geojson")
 
+floodmap_states %>% st_write("data_geojson/state_flood_risk.geojson")
+heatmap_states %>% st_write("data_geojson/state_heat_risk.geojson")
+firemap_states %>% st_write("data_geojson/state_fire_risk.geojson")
+windmap_states %>% st_write("data_geojson/state_wind_risk.geojson")
 
 
 
