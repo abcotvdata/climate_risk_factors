@@ -25,7 +25,7 @@ tracts <- get_acs(geography = "tract",
 # %>% erase_water(year=2020)
 
 
-floodmap_tracts <- left_join(tracts,flood_tract_chart,by=c("GEOID"="fips"))
+floodmap_tracts <- left_join(tracts,flood_tract_chart,by=c("geoid"="fips"))
 
 bins <- c(0, 5, 25, 50, 60, 70, 80, 90, 100)
 floodpal <- colorBin(c(colors), domain = floodmap_tracts$pct_major, bins = bins)
@@ -48,7 +48,7 @@ L.control.zoom({ position: 'topright' }).addTo(this)
         $('input.search-input')[0].placeholder = 'Search street, place or zip code'
         }") 
 
-heatmap_tracts <- left_join(tracts,heat_tract_chart,by=c("GEOID"="fips"))
+heatmap_tracts <- left_join(tracts,heat_tract_chart,by=c("geoid"="fips"))
 
 bins <- c(0, 5, 25, 50, 60, 70, 80, 90, 100)
 heatpal <- colorBin(c(colors), domain = heatmap_tracts$pct_major, bins = bins)
@@ -72,7 +72,7 @@ L.control.zoom({ position: 'topright' }).addTo(this)
         $('input.search-input')[1].placeholder = 'Search street, place or zip code'
         }") 
 
-windmap_tracts <- left_join(tracts,wind_tract_chart,by=c("GEOID"="fips"))
+windmap_tracts <- left_join(tracts,wind_tract_chart,by=c("geoid"="fips"))
 
 bins <- c(0, 5, 25, 50, 60, 70, 80, 90, 100)
 windpal <- colorBin(c(colors), domain = windmap_tracts$pct_major, bins = bins)
@@ -96,7 +96,7 @@ L.control.zoom({ position: 'topright' }).addTo(this)
         $('input.search-input')[2].placeholder = 'Search street, place or zip code'
         }") 
 
-firemap_tracts <- left_join(tracts,fire_tract_chart,by=c("GEOID"="fips"))
+firemap_tracts <- left_join(tracts,fire_tract_chart,by=c("geoid"="fips"))
 
 bins <- c(0, 5, 25, 50, 60, 70, 80, 90, 100)
 firepal <- colorBin(c(colors), domain = firemap_tracts$pct_major, bins = bins)
@@ -120,7 +120,7 @@ L.control.zoom({ position: 'topright' }).addTo(this)
         $('input.search-input')[3].placeholder = 'Search street, place or zip code'
         }") 
 
-floodmap_tracts %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/tract_flood_risk.geojson")
-heatmap_tracts %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/tract_heat_risk.geojson")
-firemap_tracts %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/tract_fire_risk.geojson")
-windmap_tracts %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/tract_wind_risk.geojson")
+floodmap_tracts %>% st_write("data_geojson/tract_flood_risk.geojson")
+heatmap_tracts %>% st_write("data_geojson/tract_heat_risk.geojson")
+firemap_tracts %>% st_write("data_geojson/tract_fire_risk.geojson")
+windmap_tracts %>% st_write("data_geojson/tract_wind_risk.geojson")

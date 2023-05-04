@@ -7,7 +7,6 @@ library(leaflet.extras)
 library(leaflet.providers)
 library(htmlwidgets)
 library(htmltools)
-
 library(MetBrewer)
 
 colors = met.brewer(name="Tam", n=10)
@@ -91,7 +90,7 @@ zips <- get_acs(geography = "zip code tabulation area",
                 year = 2021,
                 geometry = TRUE)
 
-firemap_zips <- left_join(zips,fire_zip_chart,by=c("GEOID"="fips"))
+firemap_zips <- left_join(zips,fire_zip_chart,by=c("geoid"="fips"))
 
 qpal <- colorBin("Blues", firemap_zips$pct_major, 5)
 
@@ -104,7 +103,7 @@ firemap <- leaflet(firemap_zips) %>%
               color = ~qpal(pct_major))
 firemap
 
-floodmap_zips <- left_join(zips,flood_zip_chart,by=c("GEOID"="fips"))
+floodmap_zips <- left_join(zips,flood_zip_chart,by=c("geoid"="fips"))
 
 qpal <- colorBin(c(colors), floodmap_zips$pct_major, 5)
 
@@ -118,7 +117,7 @@ floodmap <- leaflet(floodmap_zips) %>%
 floodmap
 
 
-heatmap_zips <- left_join(zips,heat_zip_chart,by=c("GEOID"="fips"))
+heatmap_zips <- left_join(zips,heat_zip_chart,by=c("geoid"="fips"))
 
 qpal <- colorBin("BuPu", heatmap_zips$pct_major, 5)
 
@@ -131,7 +130,7 @@ heatmap <- leaflet(heatmap_zips) %>%
               color = ~qpal(pct_major))
 heatmap
 
-windmap_zips <- left_join(zips,wind_zip_chart,by=c("GEOID"="fips"))
+windmap_zips <- left_join(zips,wind_zip_chart,by=c("geoid"="fips"))
 
 qpal <- colorBin("BuPu", windmap_zips$pct_major, 10)
 
@@ -155,8 +154,10 @@ counties <- get_acs(geography = "county",
                     survey = "acs5",
                     output = 'wide',
                     year = 2021,
-                    geometry = TRUE)
-counties <- st_simplify(counties, dTolerance = 200)
+                    geometry = TRUE) %>%
+  select(-4) %>%
+  rename("population"="populationE")
+# counties <- st_simplify(counties, dTolerance = 200)
 
 
 
@@ -295,15 +296,10 @@ firemap_counties %>% st_write("data_geojson/county_fire_risk.geojson")
 windmap_counties %>% st_write("data_geojson/county_wind_risk.geojson")
 
 
-floodmap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_flood_risk.geojson")
-heatmap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_heat_risk.geojson")
-firemap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_fire_risk.geojson")
-windmap_zips %>% st_simplify(dTolerance = 100) %>% st_write("data_geojson/zips_wind_risk.geojson")
-
-floodmap_states %>% st_write("data_geojson/state_flood_risk.geojson")
-heatmap_states %>% st_write("data_geojson/state_heat_risk.geojson")
-firemap_states %>% st_write("data_geojson/state_fire_risk.geojson")
-windmap_states %>% st_write("data_geojson/state_wind_risk.geojson")
+floodmap_zips %>% st_write("data_geojson/zips_flood_risk.geojson")
+heatmap_zips %>% st_write("data_geojson/zips_heat_risk.geojson")
+firemap_zips %>% st_write("data_geojson/zips_fire_risk.geojson")
+windmap_zips %>% st_write("data_geojson/zips_wind_risk.geojson")
 
 
 

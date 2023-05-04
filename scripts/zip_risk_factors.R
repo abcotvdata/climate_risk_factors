@@ -30,13 +30,23 @@ fire_zip_chart <- fire_zip %>%
                               fire_zip$count_firefactor8+
                               fire_zip$count_firefactor9+
                               fire_zip$count_firefactor10)/
-                             fire_zip$count_property*100,2),
+                             fire_zip$count_property*100,1),
          pct_severe = round((fire_zip$count_firefactor7+
                                fire_zip$count_firefactor8+
                                fire_zip$count_firefactor9+
                                fire_zip$count_firefactor10)/
-                              fire_zip$count_property*100,2)) %>%
-  select(1,2,13,14)
+                              fire_zip$count_property*100,1),
+         number_major = fire_zip$count_firefactor5+
+           fire_zip$count_firefactor6+
+           fire_zip$count_firefactor7+
+           fire_zip$count_firefactor8+
+           fire_zip$count_firefactor9+
+           fire_zip$count_firefactor10,
+         number_severe = fire_zip$count_firefactor7+
+           fire_zip$count_firefactor8+
+           fire_zip$count_firefactor9+
+           fire_zip$count_firefactor10) %>%
+  select(1,2,13,14,15,16)
 
 flood_zip_chart <- flood_zip %>%
   mutate(pct_major = round((flood_zip$count_floodfactor5+
@@ -45,13 +55,23 @@ flood_zip_chart <- flood_zip %>%
                               flood_zip$count_floodfactor8+
                               flood_zip$count_floodfactor9+
                               flood_zip$count_floodfactor10)/
-                             flood_zip$count_property*100,2),
+                             flood_zip$count_property*100,1),
          pct_severe = round((flood_zip$count_floodfactor7+
                                flood_zip$count_floodfactor8+
                                flood_zip$count_floodfactor9+
                                flood_zip$count_floodfactor10)/
-                              flood_zip$count_property*100,2)) %>%
-  select(1,2,13,14)
+                              flood_zip$count_property*100,1),
+         number_major = flood_zip$count_floodfactor5+
+           flood_zip$count_floodfactor6+
+           flood_zip$count_floodfactor7+
+           flood_zip$count_floodfactor8+
+           flood_zip$count_floodfactor9+
+           flood_zip$count_floodfactor10,
+         number_severe = flood_zip$count_floodfactor7+
+           flood_zip$count_floodfactor8+
+           flood_zip$count_floodfactor9+
+           flood_zip$count_floodfactor10) %>%
+  select(1,2,13,14,15,16)
 
 heat_zip_chart <- heat_zip %>%
   mutate(pct_major = round((heat_zip$count_heatfactor5+
@@ -60,13 +80,23 @@ heat_zip_chart <- heat_zip %>%
                               heat_zip$count_heatfactor8+
                               heat_zip$count_heatfactor9+
                               heat_zip$count_heatfactor10)/
-                             heat_zip$count_property*100,2),
+                             heat_zip$count_property*100,1),
          pct_severe = round((heat_zip$count_heatfactor7+
                                heat_zip$count_heatfactor8+
                                heat_zip$count_heatfactor9+
                                heat_zip$count_heatfactor10)/
-                              heat_zip$count_property*100,2)) %>%
-  select(1,2,13,14)
+                              heat_zip$count_property*100,1),
+         number_major = heat_zip$count_heatfactor5+
+           heat_zip$count_heatfactor6+
+           heat_zip$count_heatfactor7+
+           heat_zip$count_heatfactor8+
+           heat_zip$count_heatfactor9+
+           heat_zip$count_heatfactor10,
+         number_severe = heat_zip$count_heatfactor7+
+           heat_zip$count_heatfactor8+
+           heat_zip$count_heatfactor9+
+           heat_zip$count_heatfactor10) %>%
+  select(1,2,13,14,15,16)
 
 
 wind_zip_chart <- wind_zip %>%
@@ -76,17 +106,25 @@ wind_zip_chart <- wind_zip %>%
                               wind_zip$count_windfactor8+
                               wind_zip$count_windfactor9+
                               wind_zip$count_windfactor10)/
-                             wind_zip$count_property*100,2),
+                             wind_zip$count_property*100,1),
          pct_severe = round((wind_zip$count_windfactor7+
                                wind_zip$count_windfactor8+
                                wind_zip$count_windfactor9+
                                wind_zip$count_windfactor10)/
-                              wind_zip$count_property*100,2)) %>%
-  select(1,2,13,14)
-
+                              wind_zip$count_property*100,1),
+         number_major = wind_zip$count_windfactor5+
+           wind_zip$count_windfactor6+
+           wind_zip$count_windfactor7+
+           wind_zip$count_windfactor8+
+           wind_zip$count_windfactor9+
+           wind_zip$count_windfactor10,
+         number_severe = wind_zip$count_windfactor7+
+           wind_zip$count_windfactor8+
+           wind_zip$count_windfactor9+
+           wind_zip$count_windfactor10) %>%
+  select(1,2,13,14,15,16)
 
 flood_zip_chart %>% write_csv("data_tables/flood_zip_chart.csv")
 heat_zip_chart %>% write_csv("data_tables/heat_zip_chart.csv")
 fire_zip_chart %>% write_csv("data_tables/fire_zip_chart.csv")
 wind_zip_chart %>% write_csv("data_tables/wind_zip_chart.csv")
-
