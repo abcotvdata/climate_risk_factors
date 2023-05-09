@@ -5,9 +5,6 @@ library(sf)
 library(tigris)
 library(leaflet.extras)
 library(leaflet.providers)
-library(htmlwidgets)
-library(htmltools)
-library(MetBrewer)
 library(rmapshaper)
 
 

@@ -1,7 +1,7 @@
 library(tidyverse)
 library(stringr)
 
-# Import the basic tables for each type of risk factor
+# Import the basic tables for each type of risk factor BY ZIP
 # From the raw data provided by First Street Foundation via AWS
 
 fire_zip <- read_csv("raw_data/fire_v1.1_summary_fsf_fire_zcta_summary.csv", 
@@ -15,14 +15,15 @@ flood_zip <- read_csv("raw_data/flood_v2.1_summary_fsf_flood_zcta_summary.csv",
 
 wind_zip <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_zcta_summary.csv", 
                       col_types = cols(fips = col_character()))
-  
+
+# Padding strings to replace missing leading zeros in some zips
 wind_zip$fips <- str_pad(wind_zip$fips, width=5, side="left", use_width= T, pad = "0")
 heat_zip$fips <- str_pad(heat_zip$fips, width=5, side="left", use_width= T, pad = "0")
 flood_zip$fips <- str_pad(flood_zip$fips, width=5, side="left", use_width= T, pad = "0")
 fire_zip$fips <- str_pad(fire_zip$fips, width=5, side="left", use_width= T, pad = "0")
 
-# Create a simple table of zip code percentages above a certain level
 
+# Create simpler table of number/share of properties above major/severe levels
 fire_zip_chart <- fire_zip %>%
   mutate(pct_major = round((fire_zip$count_firefactor5+
                               fire_zip$count_firefactor6+
@@ -48,6 +49,8 @@ fire_zip_chart <- fire_zip %>%
            fire_zip$count_firefactor10) %>%
   select(1,2,13,14,15,16)
 
+
+# Create simpler table of number/share of properties above major/severe levels
 flood_zip_chart <- flood_zip %>%
   mutate(pct_major = round((flood_zip$count_floodfactor5+
                               flood_zip$count_floodfactor6+
@@ -73,6 +76,8 @@ flood_zip_chart <- flood_zip %>%
            flood_zip$count_floodfactor10) %>%
   select(1,2,13,14,15,16)
 
+
+# Create simpler table of number/share of properties above major/severe levels
 heat_zip_chart <- heat_zip %>%
   mutate(pct_major = round((heat_zip$count_heatfactor5+
                               heat_zip$count_heatfactor6+
@@ -99,6 +104,7 @@ heat_zip_chart <- heat_zip %>%
   select(1,2,13,14,15,16)
 
 
+# Create simpler table of number/share of properties above major/severe levels
 wind_zip_chart <- wind_zip %>%
   mutate(pct_major = round((wind_zip$count_windfactor5+
                               wind_zip$count_windfactor6+
@@ -124,7 +130,24 @@ wind_zip_chart <- wind_zip %>%
            wind_zip$count_windfactor10) %>%
   select(1,2,13,14,15,16)
 
+# Output csv files of tract tables
 flood_zip_chart %>% write_csv("data_tables/flood_zip_chart.csv")
 heat_zip_chart %>% write_csv("data_tables/heat_zip_chart.csv")
 fire_zip_chart %>% write_csv("data_tables/fire_zip_chart.csv")
 wind_zip_chart %>% write_csv("data_tables/wind_zip_chart.csv")
+
+# Join with census/tiger tract map files
+floodmap_zips <- left_join(zips,flood_zip_chart,by=c("geoid"="fips"))
+heatmap_zips <- left_join(zips,heat_zip_chart,by=c("geoid"="fips"))
+firemap_zips <- left_join(zips,fire_zip_chart,by=c("geoid"="fips"))
+windmap_zips <- left_join(zips,wind_zip_chart,by=c("geoid"="fips"))
+
+# Output geojsons to directory for use in production interactive
+floodmap_zips %>% st_write("data_geojson/zips_flood_risk.geojson")
+heatmap_zips %>% st_write("data_geojson/zips_heat_risk.geojson")
+firemap_zips %>% st_write("data_geojson/zips_fire_risk.geojson")
+windmap_zips %>% st_write("data_geojson/zips_wind_risk.geojson")
+
+
+
+

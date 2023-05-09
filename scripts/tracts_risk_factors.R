@@ -9,9 +9,7 @@ flood_tract <- read_csv("raw_data/flood_v2.1_summary_fsf_flood_tract_summary.csv
 wind_tract <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_tract_summary.csv")
 
 
-# 
-# Create a simple table of tract percentages above a certain level
-
+# Create simpler table of number/share of properties above major/severe levels
 fire_tract_chart <- fire_tract %>%
   mutate(pct_major = round((fire_tract$count_firefactor5+
                               fire_tract$count_firefactor6+
@@ -41,6 +39,7 @@ fire_tract_chart$state <- substr(fire_tract$fips,1,2)
 fire_tract_chart$tract <- substr(fire_tract$fips,3,11)
 fire_tract_chart$county <- substr(fire_tract$fips,1,5)
 
+# Create simpler table of number/share of properties above major/severe levels
 flood_tract_chart <- flood_tract %>%
   mutate(pct_major = round((flood_tract$count_floodfactor5+
                               flood_tract$count_floodfactor6+
@@ -71,6 +70,7 @@ flood_tract_chart$state <- substr(flood_tract$fips,1,2)
 flood_tract_chart$tract <- substr(flood_tract$fips,3,11)
 flood_tract_chart$county <- substr(flood_tract$fips,1,5)
 
+# Create simpler table of number/share of properties above major/severe levels
 heat_tract_chart <- heat_tract %>%
   mutate(pct_major = round((heat_tract$count_heatfactor5+
                               heat_tract$count_heatfactor6+
@@ -100,6 +100,7 @@ heat_tract_chart$state <- substr(heat_tract$fips,1,2)
 heat_tract_chart$tract <- substr(heat_tract$fips,3,11)
 heat_tract_chart$county <- substr(heat_tract$fips,1,5)
 
+# Create simpler table of number/share of properties above major/severe levels
 wind_tract_chart <- wind_tract %>%
   mutate(pct_major = round((wind_tract$count_windfactor5+
                               wind_tract$count_windfactor6+
@@ -129,21 +130,25 @@ wind_tract_chart$state <- substr(wind_tract$fips,1,2)
 wind_tract_chart$tract <- substr(wind_tract$fips,3,11)
 wind_tract_chart$county <- substr(wind_tract$fips,1,5)
 
+# Output csv files of tract tables
 flood_tract_chart %>% write_csv("data_tables/flood_tract_chart.csv")
 heat_tract_chart %>% write_csv("data_tables/heat_tract_chart.csv")
 fire_tract_chart %>% write_csv("data_tables/fire_tract_chart.csv")
 wind_tract_chart %>% write_csv("data_tables/wind_tract_chart.csv")
 
+# Join with census/tiger tract map files
+floodmap_tracts <- left_join(tracts,flood_tract_chart,by=c("geoid"="fips"))
+heatmap_tracts <- left_join(tracts,heat_tract_chart,by=c("geoid"="fips"))
+firemap_tracts <- left_join(tracts,fire_tract_chart,by=c("geoid"="fips"))
+windmap_tracts <- left_join(tracts,wind_tract_chart,by=c("geoid"="fips"))
 
-###
-# Data check: verified all counties missing from the county level data also missing from tract-level data
-# Some early checks on what counties are missing from FSF data
-# missing_flood_counties <- counties %>% filter(!counties$GEOID %in% flood_county_chart$fips)
-# missing_heat_counties <- counties %>% filter(!counties$GEOID %in% heat_county_chart$fips)
-# missing_fire_counties <- counties %>% filter(!counties$GEOID %in% fire_county_chart$fips)
-# missing_wind_counties <- counties %>% filter(!counties$GEOID %in% wind_county_chart$fips)
-# By state export
-# flood_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/flood_tract_chart.csv")
-# heat_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/heat_tract_chart.csv")
-# fire_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/fire_tract_chart.csv")
-# wind_tract_chart %>% filter(state=="06") %>% write_csv("data_tables/wind_tract_chart.csv")
+# Output geojsons to directory for use in production interactive
+floodmap_tracts %>% st_write("data_geojson/tract_flood_risk.geojson")
+heatmap_tracts %>% st_write("data_geojson/tract_heat_risk.geojson")
+firemap_tracts %>% st_write("data_geojson/tract_fire_risk.geojson")
+windmap_tracts %>% st_write("data_geojson/tract_wind_risk.geojson")
+
+
+
+
+
