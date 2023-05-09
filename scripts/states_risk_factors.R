@@ -1,10 +1,14 @@
 library(tidyverse)
 
+# Import the basic tables for each type of risk factor BY STATE
+# From the raw data provided by First Street Foundation via AWS
+
 fire_state <- read_csv("raw_data/fire_v1.1_summary_fsf_fire_state_summary.csv")
 heat_state <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_state_summary.csv")
 flood_state <- read_csv("raw_data/flood_v2.1_summary_fsf_flood_state_summary.csv")
 wind_state <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_state_summary.csv")
 
+# Create simpler table of number/share of properties above major/severe levels
 fire_state_chart <- fire_state %>%
   mutate(pct_major = round((fire_state$count_firefactor5+
                               fire_state$count_firefactor6+
@@ -30,6 +34,7 @@ fire_state_chart <- fire_state %>%
            fire_state$count_firefactor10) %>%
   select(1,2,3,14,15,16,17)
 
+# Create simpler table of number/share of properties above major/severe levels
 flood_state_chart <- flood_state %>%
   mutate(pct_major = round((flood_state$count_floodfactor5+
                               flood_state$count_floodfactor6+
@@ -55,6 +60,7 @@ flood_state_chart <- flood_state %>%
            flood_state$count_floodfactor10) %>%
   select(1,2,3,14,15,16,17)
 
+# Create simpler table of number/share of properties above major/severe levels
 heat_state_chart <- heat_state %>%
   mutate(pct_major = round((heat_state$count_heatfactor5+
                               heat_state$count_heatfactor6+
@@ -80,6 +86,7 @@ heat_state_chart <- heat_state %>%
            heat_state$count_heatfactor10) %>%
   select(1,2,3,14,15,16,17)
 
+# Create simpler table of number/share of properties above major/severe levels
 wind_state_chart <- wind_state %>%
   mutate(pct_major = round((wind_state$count_windfactor5+
                               wind_state$count_windfactor6+
@@ -105,16 +112,19 @@ wind_state_chart <- wind_state %>%
            wind_state$count_windfactor10) %>%
   select(1,2,3,14,15,16,17)
 
+# Output csv files of counties tables
 flood_state_chart %>% write_csv("data_tables/flood_state_chart.csv")
 heat_state_chart %>% write_csv("data_tables/heat_state_chart.csv")
 fire_state_chart %>% write_csv("data_tables/fire_state_chart.csv")
 wind_state_chart %>% write_csv("data_tables/wind_state_chart.csv")
 
-windmap_states <- left_join(states,wind_state_chart,by=c("GEOID"="fips"))
-heatmap_states <- left_join(states,heat_state_chart,by=c("GEOID"="fips"))
-firemap_states <- left_join(states,fire_state_chart,by=c("GEOID"="fips"))
-floodmap_states <- left_join(states,flood_state_chart,by=c("GEOID"="fips"))
+# Join with census/tiger tract map files
+windmap_states <- left_join(states,wind_state_chart,by=c("geoid"="fips"))
+heatmap_states <- left_join(states,heat_state_chart,by=c("geoid"="fips"))
+firemap_states <- left_join(states,fire_state_chart,by=c("geoid"="fips"))
+floodmap_states <- left_join(states,flood_state_chart,by=c("geoid"="fips"))
 
+# Output geojsons to directory for use in production interactive
 floodmap_states %>% st_write("data_geojson/state_flood_risk.geojson")
 heatmap_states %>% st_write("data_geojson/state_heat_risk.geojson")
 firemap_states %>% st_write("data_geojson/state_fire_risk.geojson")
