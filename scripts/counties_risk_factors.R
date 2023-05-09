@@ -8,8 +8,7 @@ heat_county <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_county_summary.csv"
 flood_county <- read_csv("raw_data/flood_v2.1_summary_fsf_flood_county_summary.csv")
 wind_county <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_county_summary.csv")
 
-# Simpler tables of count and percentage above major/severe levels
-
+# Create simpler table of number/share of properties above major/severe levels
 fire_county_chart <- fire_county %>%
   mutate(pct_major = round((fire_county$count_firefactor5+
                         fire_county$count_firefactor6+
@@ -35,6 +34,7 @@ fire_county_chart <- fire_county %>%
            fire_county$count_firefactor10) %>%
   select(1,2,3,14,15,16,17)
 
+# Create simpler table of number/share of properties above major/severe levels
 flood_county_chart <- flood_county %>%
   mutate(pct_major = round((flood_county$count_floodfactor5+
                               flood_county$count_floodfactor6+
@@ -60,6 +60,7 @@ flood_county_chart <- flood_county %>%
            flood_county$count_floodfactor10) %>%
   select(1,2,3,14,15,16,17)
 
+# Create simpler table of number/share of properties above major/severe levels
 heat_county_chart <- heat_county %>%
   mutate(pct_major = round((heat_county$count_heatfactor5+
                               heat_county$count_heatfactor6+
@@ -85,6 +86,7 @@ heat_county_chart <- heat_county %>%
            heat_county$count_heatfactor10) %>%
   select(1,2,3,14,15,16,17)
 
+# Create simpler table of number/share of properties above major/severe levels
 wind_county_chart <- wind_county %>%
   mutate(pct_major = round((wind_county$count_windfactor5+
                               wind_county$count_windfactor6+
@@ -110,10 +112,24 @@ wind_county_chart <- wind_county %>%
            wind_county$count_windfactor10) %>%
   select(1,2,3,14,15,16,17)
 
+# Output csv files of counties tables
 flood_county_chart %>% write_csv("data_tables/flood_county_chart.csv")
 heat_county_chart %>% write_csv("data_tables/heat_county_chart.csv")
 fire_county_chart %>% write_csv("data_tables/fire_county_chart.csv")
 wind_county_chart %>% write_csv("data_tables/wind_county_chart.csv")
+
+# Join with census/tiger tract map files
+floodmap_counties <- left_join(counties,flood_county_chart,by=c("geoid"="fips"))
+heatmap_counties <- left_join(counties,heat_county_chart,by=c("geoid"="fips"))
+firemap_counties <- left_join(counties,fire_county_chart,by=c("geoid"="fips"))
+windmap_counties <- left_join(counties,wind_county_chart,by=c("geoid"="fips"))
+
+# Output geojsons to directory for use in production interactive
+floodmap_counties %>% st_write("data_geojson/county_flood_risk.geojson")
+heatmap_counties %>% st_write("data_geojson/county_heat_risk.geojson")
+firemap_counties %>% st_write("data_geojson/county_fire_risk.geojson")
+windmap_counties %>% st_write("data_geojson/county_wind_risk.geojson")
+
 
 
 
