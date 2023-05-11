@@ -28,6 +28,11 @@ tracts <- get_acs(geography = "tract",
   ms_simplify(keep = 0.1, keep_shapes = FALSE)
 # original was .4
 
+# Quickly add state identifiers to tracts
+state_df <- data.frame(abbreviation = state.abb, name = state.name)
+state_df[nrow(state_df) + 1,] <- c("DC", "District of Columbia")
+floodmap_tracts <- left_join(tracts,state_df,by=c("geoid"="fips"))
+
 # Get zip code area geography and population
 zips <- get_acs(geography = "zip code tabulation area",
                   variables = my_vars,

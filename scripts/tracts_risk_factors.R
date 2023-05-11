@@ -39,6 +39,9 @@ fire_tract_chart$state <- substr(fire_tract$fips,1,2)
 fire_tract_chart$tract <- substr(fire_tract$fips,3,11)
 fire_tract_chart$county <- substr(fire_tract$fips,1,5)
 
+
+
+
 # Create simpler table of number/share of properties above major/severe levels
 flood_tract_chart <- flood_tract %>%
   mutate(pct_major = round((flood_tract$count_floodfactor5+
@@ -149,6 +152,39 @@ firemap_tracts %>% st_write("data_geojson/tract_fire_risk.geojson")
 windmap_tracts %>% st_write("data_geojson/tract_wind_risk.geojson")
 
 
+# Test loop writer to build tracts/risk data by state for interactive
+
+# Output geojsons to directory for use in production interactive
+#floodmap_tracts %>% st_write("data_geojson/tract_flood_risk.geojson")
+#heatmap_tracts %>% st_write("data_geojson/tract_heat_risk.geojson")
+#firemap_tracts %>% st_write("data_geojson/tract_fire_risk.geojson")
+#windmap_tracts %>% st_write("data_geojson/tract_wind_risk.geojson")
+
+#state_df <- data.frame(abbreviation = state.abb, name = state.name)
+#state_df[nrow(state_df) + 1,] <- c("DC", "District of Columbia")
+statefips <- states$geoid
+
+for (i in statefips) {
+  state_filter <- windmap_tracts %>% filter(state == i)
+  state_filter_code <- i
+  state_filter %>% st_write(paste0("data_geojson/windtracts_",state_filter_code,".geojson"))
+  }
+
+for (i in statefips) {
+  state_filter <- heatmap_tracts %>% filter(state == i)
+  state_filter_code <- i
+  state_filter %>% st_write(paste0("data_geojson/heattracts_",state_filter_code,".geojson"))
+}
 
 
+for (i in statefips) {
+  state_filter <- firemap_tracts %>% filter(state == i)
+  state_filter_code <- i
+  state_filter %>% st_write(paste0("data_geojson/firetracts_",state_filter_code,".geojson"))
+}
 
+for (i in statefips) {
+  state_filter <- floodmap_tracts %>% filter(state == i)
+  state_filter_code <- i
+  state_filter %>% st_write(paste0("data_geojson/floodtracts_",state_filter_code,".geojson"))
+}
