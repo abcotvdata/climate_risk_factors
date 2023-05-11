@@ -25,7 +25,7 @@ tracts <- get_acs(geography = "tract",
   rename("population"="population_e") %>%
   select(-4) %>%
   st_transform(4326) %>%
-  ms_simplify(keep = 0.2, keep_shapes = FALSE)
+  ms_simplify(keep = 0.1, keep_shapes = FALSE)
 # original was .4
 
 # Get zip code area geography and population
@@ -39,7 +39,7 @@ zips <- get_acs(geography = "zip code tabulation area",
   rename("population"="population_e") %>%
   select(-4) %>%
   st_transform(4326) %>% 
-  ms_simplify(keep = 0.25, keep_shapes = FALSE)
+  ms_simplify(keep = 0.1, keep_shapes = FALSE)
 # original was 0.5
 
 # Get county geography and population
