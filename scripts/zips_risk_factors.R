@@ -143,11 +143,36 @@ firemap_zips <- left_join(zips,fire_zip_chart,by=c("geoid"="fips"))
 windmap_zips <- left_join(zips,wind_zip_chart,by=c("geoid"="fips"))
 
 # Output geojsons to directory for use in production interactive
-floodmap_zips %>% st_write("data_geojson/zips_flood_risk.geojson")
-heatmap_zips %>% st_write("data_geojson/zips_heat_risk.geojson")
-firemap_zips %>% st_write("data_geojson/zips_fire_risk.geojson")
-windmap_zips %>% st_write("data_geojson/zips_wind_risk.geojson")
+floodmap_zips %>% select(1,9) %>% st_write("data_geojson/zips_flood_risk.geojson")
+heatmap_zips %>% select(1,9) %>% st_write("data_geojson/zips_heat_risk.geojson")
+firemap_zips %>% select(1,9) %>% st_write("data_geojson/zips_fire_risk.geojson")
+windmap_zips %>% select(1,9) %>% st_write("data_geojson/zips_wind_risk.geojson")
+
+statefips <- states$geoid
+
+for (i in statefips) {
+  state_filter <- windmap_zips %>% filter(state == i)
+  state_filter_code <- i
+  state_filter %>% st_write(paste0("data_geojson/windzips_",state_filter_code,".geojson"))
+}
+
+for (i in statefips) {
+  state_filter <- heatmap_zips %>% filter(state == i)
+  state_filter_code <- i
+  state_filter %>% st_write(paste0("data_geojson/heatzips_",state_filter_code,".geojson"))
+}
 
 
+for (i in statefips) {
+  state_filter <- firemap_zips %>% filter(state == i)
+  state_filter_code <- i
+  state_filter %>% st_write(paste0("data_geojson/firezips_",state_filter_code,".geojson"))
+}
+
+for (i in statefips) {
+  state_filter <- floodmap_zips %>% filter(state == i)
+  state_filter_code <- i
+  state_filter %>% st_write(paste0("data_geojson/floodzips_",state_filter_code,".geojson"))
+}
 
 
