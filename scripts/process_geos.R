@@ -52,7 +52,8 @@ counties <- get_acs(geography = "county",
                   geometry = TRUE) %>%
   janitor::clean_names() %>%
   rename("population"="population_e") %>%
-  st_transform(4326)
+  st_transform(4326) %>%
+  ms_simplify(keep = 0.5, keep_shapes = FALSE)
 
 # Get state geography and population
 states <- get_acs(geography = "state",
