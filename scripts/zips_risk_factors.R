@@ -1,5 +1,6 @@
 library(tidyverse)
 library(stringr)
+library(sf)
 
 # Import the basic tables for each type of risk factor BY ZIP
 # From the raw data provided by First Street Foundation via AWS
@@ -143,10 +144,11 @@ firemap_zips <- left_join(zips,fire_zip_chart,by=c("geoid"="fips"))
 windmap_zips <- left_join(zips,wind_zip_chart,by=c("geoid"="fips"))
 
 # Output geojsons to directory for use in production interactive
-floodmap_zips %>% select(1,9) %>% st_write("data_geojson/zips_flood_risk.geojson")
-heatmap_zips %>% select(1,9) %>% st_write("data_geojson/zips_heat_risk.geojson")
-firemap_zips %>% select(1,9) %>% st_write("data_geojson/zips_fire_risk.geojson")
-windmap_zips %>% select(1,9) %>% st_write("data_geojson/zips_wind_risk.geojson")
+floodmap_zips %>% st_write("data_geojson/zips_flood_risk.geojson")
+heatmap_zips %>% st_write("data_geojson/zips_heat_risk.geojson")
+firemap_zips %>% st_write("data_geojson/zips_fire_risk.geojson")
+windmap_zips %>% st_write("data_geojson/zips_wind_risk.geojson")
+windmap_zips %>% select(1,9) %>% st_write("data_geojson/all_zips.geojson")
 
 statefips <- states$geoid
 
