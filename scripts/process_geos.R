@@ -42,6 +42,21 @@ zips <- get_acs(geography = "zip code tabulation area",
   ms_simplify(keep = 0.2, keep_shapes = FALSE)
 # original was 0.5
 
+# Get zip code area geography and population
+# cities <- get_acs(geography = "place",
+#                variables = my_vars,
+#                survey = "acs5",
+#                year = 2021,
+#                output = "wide",
+#                geometry = TRUE) %>%
+#  janitor::clean_names() %>%
+#  rename("population"="population_e") %>%
+#  select(-4) %>%
+#  st_transform(4326) %>% 
+#  ms_simplify(keep = 0.5, keep_shapes = FALSE)
+# original was 0.5
+
+
 # Get county geography and population
 counties <- get_acs(geography = "county",
                   variables = my_vars,

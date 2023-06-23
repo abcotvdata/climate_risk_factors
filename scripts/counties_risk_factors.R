@@ -129,6 +129,7 @@ floodmap_counties %>% st_write("data_geojson/county_flood_risk.geojson")
 heatmap_counties %>% st_write("data_geojson/county_heat_risk.geojson")
 firemap_counties %>% st_write("data_geojson/county_fire_risk.geojson")
 windmap_counties %>% st_write("data_geojson/county_wind_risk.geojson")
+windmap_counties %>% select(1,2,11) %>% st_write("data_geojson/counties.geojson")
 
 
 
