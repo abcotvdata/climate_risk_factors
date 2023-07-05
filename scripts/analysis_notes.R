@@ -76,35 +76,41 @@ flood_tract_chart %>% filter(pct_major>50) %>% nrow() # 4,359 or 4%
 # New Jersey: flood 14% major, fire 5% major, heat 95% major, wind 83% major
 
 # Our core counties
-# California-Los Angeles: flood 16% major (332,000 properties), fire 11% major (238K prop), heat 84% major, wind 0% major
-# California-Orange: flood 13% major (86,000 properties), fire 5% major, heat 81% major, wind 0% major
-# California-Riverside: flood 13% major (118,000 properties), fire 67% major (592K prop), heat 99% major, wind 0% major
-# California-San Bernardino: flood 11% major (87,000 properties), fire 45% major (369K prop), heat 91% major, wind 0% major
-# California-Ventura: flood 16% major (40,000 properties), fire 18% major (46K prop), heat 48% major, wind 0% major
+# California-Los Angeles: flood 16% (332,000 properties), fire 11% (238K prop), heat 84%, wind 0%
+# California-Orange: flood 13% (86,000 properties), fire 5%, heat 81%, wind 0%
+# California-Riverside: flood 13% (118,000 properties), fire 67% (592K prop), heat 99%, wind 0%
+# California-San Bernardino: flood 11% (87,000 properties), fire 45% (369K prop), heat 91%, wind 0%
+# California-Ventura: flood 16% (40,000 properties), fire 18% (46K prop), heat 48%, wind 0%
 
-# California-Fresno: flood 16% major (49,000 properties), fire 29% major (89K prop), heat 98% major, wind 0% major
+# California-Fresno: flood 16% (49,000 properties), fire 29% (89K prop), heat 98%, wind 0%
 
-# California-San Francisco: flood 7% major (10,000 properties), fire 0% major, heat 0% major, wind 0% major
-# California-Alameda: flood 14% major (58,000 properties), fire 5% major, heat 9% major, wind 0% major
-# California-Santa Clara: flood 23% major (107,000 properties), fire 0% major, heat 44% major, wind 0% major
+# California-San Francisco: flood 7% (10,000 properties), fire 0%, heat 0%, wind 0%
+# California-Alameda: flood 14% (58,000 properties), fire 5%, heat 9%, wind 0%
+# California-Santa Clara: flood 23% (107,000 properties), fire 0%, heat 44%, wind 0%
 
+# California-Contra Costa: flood 23% (107,000 properties), fire 0%, heat 44%, wind 0%
+# California-Marin: flood 23% (107,000 properties), fire 0%, heat 44%, wind 0%
+# California-Napa: flood 23% (107,000 properties), fire 0%, heat 44%, wind 0%
+# California-San Mateo: flood 23% (107,000 properties), fire 0%, heat 44%, wind 0%
+# California-Solano: flood 23% (107,000 properties), fire 0%, heat 44%, wind 0%
+# California-Sonoma: flood 23% (107,000 properties), fire 0%, heat 44%, wind 0%
 
-# Texas-Harris: flood 15% major (198K), fire 0% major, heat 100% major, wind 100% major
-# Texas-Galveston: flood 75% major (125K), fire 6% major, heat 100% major, wind 100% major
+# Texas-Harris: flood 15% (198K), fire 0%, heat 100%, wind 100%
+# Texas-Galveston: flood 75% (125K), fire 6%, heat 100%, wind 100%
 
-# North Carolina-Wake: flood 6% major, fire 0% major, heat 100% major, wind 100% major
-# North Carolina-Durham: flood 7% major, fire 0% major, heat 100% major, wind 98% major
+# North Carolina-Wake: flood 6%, fire 0%, heat 100%, wind 100%
+# North Carolina-Durham: flood 7%, fire 0%, heat 100%, wind 98%
 
-# Pennsylvania-Philadelphia: flood 10% major (54K), fire 0% major, heat 100% major, wind 100% major
+# Pennsylvania-Philadelphia: flood 10% (54K), fire 0%, heat 100%, wind 100%
 
-# Illinois-Cook: flood 15% major (209K properties), fire 0% major, heat 0% major, wind 0% major
+# Illinois-Cook: flood 15% (209K properties), fire 0%, heat 0%, wind 0%
 
-# New York-Queens: flood 14% major (44K), fire 0% major, heat 100% major, wind 100% major
-# New York-Richmond: flood 12% major (14K), fire 1% major, heat 100% major, wind 100% major
-# New York-Kings: flood 12% major (32K), fire 0% major, heat 100% major, wind 100% major
-# New York-New York (Manhattan): flood 6% major (2,600), fire 0% major, heat 100% major, wind 20% major
-# New York-Bronx: flood 11% major (9,600), fire 0% major, heat 100% major, wind 57% major
+# New York-Queens: flood 14% (44K), fire 0%, heat 100%, wind 100%
+# New York-Richmond: flood 12% (14K), fire 1%, heat 100%, wind 100%
+# New York-Kings: flood 12% (32K), fire 0%, heat 100%, wind 100%
+# New York-New York (Manhattan): flood 6% (2,600), fire 0%, heat 100%, wind 20%
+# New York-Bronx: flood 11% (9,600), fire 0%, heat 100%, wind 57%
 
-# New Jersey: flood 14% major, fire 5% major, heat 95% major, wind 83% major
+# New Jersey: flood 14%, fire 5%, heat 95%, wind 83%
 
 
