@@ -219,7 +219,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 08005,Arapahoe County,219568,44.6,30.7,97956,67420
 08007,Archuleta County,18095,38.9,8.5,7036,1538
 08009,Baca County,621,97.6,72.5,606,450
-08011,Bent County,NA,NA,NA,0,0
 08013,Boulder County,112480,68,29,76435,32662
 08014,Broomfield County,26630,71.9,11.5,19157,3056
 08015,Chaffee County,16895,78,19.3,13185,3260
@@ -227,7 +226,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 08019,Clear Creek County,14888,18.4,0.7,2732,101
 08021,Conejos County,8144,0.2,0,16,0
 08023,Costilla County,45691,0.1,0,60,0
-08025,Crowley County,NA,NA,NA,0,0
 08027,Custer County,8715,33.2,6.8,2891,593
 08029,Delta County,18627,25.1,3.1,4675,586
 08031,Denver County,190528,13.2,8.2,25078,15636
@@ -241,11 +239,9 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 08047,Gilpin County,8713,15.3,0.7,1331,57
 08049,Grand County,21986,18,0.1,3956,24
 08051,Gunnison County,17783,22.5,2.2,3997,397
-08053,Hinsdale County,NA,NA,NA,0,0
 08055,Huerfano County,14197,64.4,45.3,9149,6429
 08057,Jackson County,2813,31.4,18.9,883,533
 08059,Jefferson County,212323,51.2,19.4,108614,41180
-08061,Kiowa County,NA,NA,NA,0,0
 08063,Kit Carson County,9518,20.8,2.2,1975,209
 08065,Lake County,8674,6.3,0,544,0
 08067,La Plata County,34622,52.2,20.9,18072,7245
@@ -275,7 +271,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 08115,Sedgwick County,2996,35.7,0.1,1071,3
 08117,Summit County,20693,30.8,0.9,6372,181
 08119,Teller County,26404,69.8,22.6,18422,5957
-08121,Washington County,NA,NA,NA,0,0
 08123,Weld County,150541,64.2,42.8,96589,64426
 08125,Yuma County,12241,46.2,15.9,5658,1950
 09001,Fairfield County,272462,0,0,0,0
@@ -963,7 +958,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 21007,Ballard County,6359,0,0,0,0
 21009,Barren County,23480,0,0,2,0
 21011,Bath County,6760,7.4,0.5,497,31
-21013,Bell County,NA,NA,NA,0,0
 21015,Boone County,53422,0,0,0,0
 21017,Bourbon County,9140,0,0,0,0
 21019,Boyd County,26153,10.2,0.5,2657,140
@@ -982,14 +976,11 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 21045,Casey County,10656,4,0,424,0
 21047,Christian County,27043,0,0,9,0
 21049,Clark County,17082,0,0,0,0
-21051,Clay County,NA,NA,NA,0,0
-21053,Clinton County,NA,NA,NA,0,0
 21055,Crittenden County,8071,0.5,0,37,0
 21057,Cumberland County,4728,5.6,0,266,0
 21059,Daviess County,45019,0.2,0,99,0
 21061,Edmonson County,11654,0.3,0,31,0
 21063,Elliott County,3958,55,9.2,2175,363
-21065,Estill County,NA,NA,NA,0,0
 21067,Fayette County,112320,0,0,0,0
 21069,Fleming County,9070,7.8,0.2,707,15
 21071,Floyd County,20425,44.2,11.5,9020,2351
@@ -1008,20 +999,16 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 21097,Harrison County,8910,0,0,0,0
 21099,Hart County,12140,0.2,0,20,0
 21101,Henderson County,20283,0,0,3,0
-21103,Henry County,NA,NA,NA,0,0
 21105,Hickman County,4354,0,0,0,0
 21107,Hopkins County,28369,0.5,0,131,4
-21109,Jackson County,NA,NA,NA,0,0
 21111,Jefferson County,285890,0,0,0,0
 21113,Jessamine County,20753,0,0,0,0
 21115,Johnson County,11122,61.1,21.2,6798,2359
 21117,Kenton County,62056,0,0,0,0
-21119,Knott County,NA,NA,NA,0,0
 21121,Knox County,15238,59.2,32.4,9017,4937
 21123,Larue County,9147,0.4,0,37,0
 21125,Laurel County,27128,19.9,5.3,5394,1449
 21127,Lawrence County,9728,46.9,12.4,4561,1202
-21129,Lee County,NA,NA,NA,0,0
 21131,Leslie County,8913,63.8,31.9,5683,2847
 21133,Letcher County,12547,37.6,10.8,4721,1358
 21135,Lewis County,8136,9.3,0.2,760,17
@@ -1039,7 +1026,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 21159,Martin County,6621,73.3,29.5,4856,1950
 21161,Mason County,11106,0,0,0,0
 21163,Meade County,14623,0.4,0,60,0
-21165,Menifee County,NA,NA,NA,0,0
 21167,Mercer County,12032,0,0,0,0
 21169,Metcalfe County,6586,0.9,0,59,0
 21171,Monroe County,8403,5.5,0,459,0
@@ -1058,7 +1044,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 21197,Powell County,7087,11.6,1.5,823,109
 21199,Pulaski County,46982,4.9,0.2,2279,88
 21201,Robertson County,1580,0,0,0,0
-21203,Rockcastle County,NA,NA,NA,0,0
 21205,Rowan County,12134,24.8,4.4,3007,530
 21207,Russell County,20846,0,0,4,0
 21209,Scott County,22571,0,0,0,0
@@ -1075,7 +1060,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 21231,Wayne County,15234,12.9,0.5,1958,79
 21233,Webster County,10788,1.4,0,147,0
 21235,Whitley County,18437,41.4,19.2,7633,3548
-21237,Wolfe County,NA,NA,NA,0,0
 21239,Woodford County,11732,0,0,0,0
 22001,Acadia Parish,33719,0,0,0,0
 22003,Allen Parish,13282,29.7,12.2,3940,1625
@@ -1109,7 +1093,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 22059,LaSalle Parish,12587,12.9,0.6,1619,72
 22061,Lincoln Parish,24478,0.4,0,102,0
 22063,Livingston Parish,62433,4.3,0.6,2676,354
-22065,Madison Parish,NA,NA,NA,0,0
 22067,Morehouse Parish,20558,1.2,0,241,0
 22069,Natchitoches Parish,23481,7.2,0.1,1702,23
 22071,Orleans Parish,150990,0.1,0,164,0
@@ -1122,7 +1105,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 22085,Sabine Parish,22286,27.4,1.2,6116,257
 22087,St. Bernard Parish,21573,0,0,1,0
 22089,St. Charles Parish,34060,0,0,0,0
-22091,St. Helena Parish,NA,NA,NA,0,0
 22093,St. James Parish,10279,0,0,0,0
 22095,St. John the Baptist Parish,25406,0,0,2,0
 22097,St. Landry Parish,49554,0,0,4,0
@@ -1140,7 +1122,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 22121,West Baton Rouge Parish,10840,0,0,0,0
 22123,West Carroll Parish,6523,7,0,458,2
 22125,West Feliciana Parish,5610,0,0,1,0
-22127,Winn Parish,NA,NA,NA,0,0
 23001,Androscoggin County,39281,0,0,0,0
 23003,Aroostook County,35861,0,0,0,0
 23005,Cumberland County,140007,0,0,0,0
@@ -1260,7 +1241,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 26125,Oakland County,434013,0,0,0,0
 26127,Oceana County,25941,0,0,1,0
 26129,Ogemaw County,27057,6.6,1.1,1785,304
-26131,Ontonagon County,NA,NA,NA,0,0
 26133,Osceola County,12450,0.6,0,77,0
 26135,Oscoda County,15179,21.9,1.1,3330,164
 26137,Otsego County,26705,5.9,0,1566,0
@@ -1271,7 +1251,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 26147,St. Clair County,76880,0,0,0,0
 26149,St. Joseph County,35336,0,0,0,0
 26151,Sanilac County,30978,0,0,0,0
-26153,Schoolcraft County,NA,NA,NA,0,0
 26155,Shiawassee County,33820,0,0,0,0
 26157,Tuscola County,35717,0,0,0,0
 26159,Van Buren County,49556,0,0,0,0
@@ -1760,7 +1739,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 34039,Union County,149006,0,0,38,0
 34041,Warren County,48526,4.4,0.1,2141,58
 35001,Bernalillo County,251252,17.2,7.7,43092,19318
-35003,Catron County,NA,NA,NA,0,0
 35005,Chaves County,35639,72.7,15.9,25905,5657
 35006,Cibola County,21282,9.5,5.8,2019,1230
 35007,Colfax County,24625,51.2,23.6,12605,5816
@@ -1777,9 +1755,7 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 35028,Los Alamos County,8398,0,0,0,0
 35029,Luna County,115525,7.6,3.2,8782,3742
 35031,McKinley County,12686,5.8,3,737,381
-35033,Mora County,NA,NA,NA,0,0
 35035,Otero County,47882,34,16.8,16284,8066
-35037,Quay County,NA,NA,NA,0,0
 35039,Rio Arriba County,30868,26.5,9.2,8180,2835
 35041,Roosevelt County,14211,75.9,51.7,10784,7345
 35043,Sandoval County,145721,6.1,4.1,8940,5911
@@ -2345,7 +2321,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 46035,Davison County,11331,17.3,0,1956,0
 46037,Day County,11072,4.1,0,455,2
 46039,Deuel County,5661,9.6,1.5,541,83
-46041,Dewey County,NA,NA,NA,0,0
 46043,Douglas County,4410,5.8,0,256,0
 46045,Edmunds County,8997,2.7,0,245,0
 46047,Fall River County,11025,95.4,66.5,10518,7333
@@ -2354,7 +2329,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 46053,Gregory County,7522,2.4,0,177,0
 46055,Haakon County,10250,56.1,2.3,5751,240
 46057,Hamlin County,6906,2.9,0,203,2
-46059,Hand County,NA,NA,NA,0,0
 46061,Hanson County,4121,2.5,0,102,0
 46063,Harding County,6548,88.1,58.7,5769,3843
 46065,Hughes County,10531,10.2,0.3,1076,32
@@ -2379,19 +2353,15 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 46102,Oglala Lakota County,10987,79.4,62.1,8729,6820
 46103,Pennington County,51571,84.6,50.7,43651,26125
 46105,Perkins County,15030,55.6,0.2,8357,31
-46107,Potter County,NA,NA,NA,0,0
 46109,Roberts County,14323,14.6,4,2084,576
 46111,Sanborn County,4942,1.8,0,91,0
 46115,Spink County,11515,1,0,120,5
-46117,Stanley County,NA,NA,NA,0,0
-46119,Sully County,NA,NA,NA,0,0
 46121,Todd County,4637,93.1,69.6,4315,3226
 46123,Tripp County,9052,8.7,0,788,0
 46125,Turner County,9174,1.5,0.1,142,9
 46127,Union County,13092,3.1,0.2,402,24
 46129,Walworth County,7878,11.9,2.6,940,201
 46135,Yankton County,14946,9.3,1.9,1390,279
-46137,Ziebach County,NA,NA,NA,0,0
 47001,Anderson County,35954,6.9,1.2,2471,426
 47003,Bedford County,22172,0,0,1,0
 47005,Benton County,16441,15.8,0,2592,5
@@ -2528,7 +2498,6 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 48077,Clay County,11574,82.2,56.5,9516,6544
 48079,Cochran County,5256,37,27.2,1943,1430
 48081,Coke County,6825,77.4,42.7,5282,2916
-48083,Coleman County,NA,NA,NA,0,0
 48085,Collin County,357681,34.7,7.9,124157,28152
 48087,Collingsworth County,4919,64.5,18.3,3174,902
 48089,Colorado County,21680,1.2,0,259,3
@@ -2806,10 +2775,8 @@ fips,namelsad,count_property,pct_major,pct_severe,number_major,number_severe
 51037,Charlotte County,14708,23,0,3382,0
 51041,Chesterfield County,137654,1.1,0,1505,0
 51043,Clarke County,9018,27.2,0.5,2450,44
-51045,Craig County,NA,NA,NA,0,0
 51047,Culpeper County,22960,4.1,0,944,0
 51049,Cumberland County,9098,12.7,0,1155,0
-51051,Dickenson County,NA,NA,NA,0,0
 51053,Dinwiddie County,19683,7.8,0,1543,0
 51057,Essex County,9913,0.2,0,21,0
 51059,Fairfax County,310574,0,0,0,0

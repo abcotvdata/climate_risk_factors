@@ -6,16 +6,16 @@ library(sf)
 # From the raw data provided by First Street Foundation via AWS
 
 fire_zip <- read_csv("raw_data/fire_v2.0_summary_fsf_fire_zcta_summary.csv", 
-                     col_types = cols(fips = col_character()))
+                     col_types = cols(fips = col_character())) %>% filter(!is.na(count_property))
 
 heat_zip <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_zcta_summary.csv",
-                     col_types = cols(fips = col_character()))
+                     col_types = cols(fips = col_character())) %>% filter(!is.na(count_property))
 
 flood_zip <- read_csv("raw_data/flood_v3.0_summary_fsf_flood_zcta_summary.csv", 
-                      col_types = cols(fips = col_character()))
+                      col_types = cols(fips = col_character())) %>% filter(!is.na(count_property))
 
 wind_zip <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_zcta_summary.csv", 
-                      col_types = cols(fips = col_character()))
+                      col_types = cols(fips = col_character())) %>% filter(!is.na(count_property))
 
 # Padding strings to replace missing leading zeros in some zips
 wind_zip$fips <- str_pad(wind_zip$fips, width=5, side="left", use_width= T, pad = "0")

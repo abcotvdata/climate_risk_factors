@@ -4,10 +4,10 @@ library(sf)
 # Import the basic tables for each type of risk factor BY STATE
 # From the raw data provided by First Street Foundation via AWS
 
-fire_state <- read_csv("raw_data/fire_v2.0_summary_fsf_fire_state_summary.csv")
-heat_state <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_state_summary.csv")
-flood_state <- read_csv("raw_data/flood_v3.0_summary_fsf_flood_state_summary.csv")
-wind_state <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_state_summary.csv")
+fire_state <- read_csv("raw_data/fire_v2.0_summary_fsf_fire_state_summary.csv") %>% filter(!is.na(count_property))
+heat_state <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_state_summary.csv") %>% filter(!is.na(count_property))
+flood_state <- read_csv("raw_data/flood_v3.0_summary_fsf_flood_state_summary.csv") %>% filter(!is.na(count_property))
+wind_state <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_state_summary.csv") %>% filter(!is.na(count_property))
 
 # Create simpler table of number/share of properties above major/severe levels
 fire_state_chart <- fire_state %>%

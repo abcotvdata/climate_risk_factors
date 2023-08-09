@@ -5,10 +5,10 @@ library(sf)
 # Import the basic tables for each type of risk factor BY COUNTY
 # From the raw data provided by First Street Foundation via AWS
 
-fire_county <- read_csv("raw_data/fire_v2.0_summary_fsf_fire_county_summary.csv")
-heat_county <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_county_summary.csv")
-flood_county <- read_csv("raw_data/flood_v3.0_summary_fsf_flood_county_summary.csv")
-wind_county <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_county_summary.csv")
+fire_county <- read_csv("raw_data/fire_v2.0_summary_fsf_fire_county_summary.csv") %>% filter(!is.na(count_property))
+heat_county <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_county_summary.csv") %>% filter(!is.na(count_property))
+flood_county <- read_csv("raw_data/flood_v3.0_summary_fsf_flood_county_summary.csv") %>% filter(!is.na(count_property))
+wind_county <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_county_summary.csv") %>% filter(!is.na(count_property))
 
 # Create simpler table of number/share of properties above major/severe levels
 fire_county_chart <- fire_county %>%
