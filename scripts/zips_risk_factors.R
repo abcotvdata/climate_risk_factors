@@ -5,13 +5,13 @@ library(sf)
 # Import the basic tables for each type of risk factor BY ZIP
 # From the raw data provided by First Street Foundation via AWS
 
-fire_zip <- read_csv("raw_data/fire_v1.1_summary_fsf_fire_zcta_summary.csv", 
+fire_zip <- read_csv("raw_data/fire_v2.0_summary_fsf_fire_zcta_summary.csv", 
                      col_types = cols(fips = col_character()))
 
 heat_zip <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_zcta_summary.csv",
                      col_types = cols(fips = col_character()))
 
-flood_zip <- read_csv("raw_data/flood_v2.1_summary_fsf_flood_zcta_summary.csv", 
+flood_zip <- read_csv("raw_data/flood_v3.0_summary_fsf_flood_zcta_summary.csv", 
                       col_types = cols(fips = col_character()))
 
 wind_zip <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_zcta_summary.csv", 
@@ -150,31 +150,31 @@ firemap_zips %>% st_write("data_geojson/zips_fire_risk.geojson")
 windmap_zips %>% st_write("data_geojson/zips_wind_risk.geojson")
 windmap_zips %>% select(1,9) %>% st_write("data_geojson/all_zips.geojson")
 
-statefips <- states$geoid
+#statefips <- states$geoid
 
-for (i in statefips) {
-  state_filter <- windmap_zips %>% filter(state == i)
-  state_filter_code <- i
-  state_filter %>% st_write(paste0("data_geojson/windzips_",state_filter_code,".geojson"))
-}
+#for (i in statefips) {
+#  state_filter <- windmap_zips %>% filter(state == i)
+#  state_filter_code <- i
+#  state_filter %>% st_write(paste0("data_geojson/windzips_",state_filter_code,".geojson"))
+#}
 
-for (i in statefips) {
-  state_filter <- heatmap_zips %>% filter(state == i)
-  state_filter_code <- i
-  state_filter %>% st_write(paste0("data_geojson/heatzips_",state_filter_code,".geojson"))
-}
+#for (i in statefips) {
+#  state_filter <- heatmap_zips %>% filter(state == i)
+#  state_filter_code <- i
+#  state_filter %>% st_write(paste0("data_geojson/heatzips_",state_filter_code,".geojson"))
+#}
 
 
-for (i in statefips) {
-  state_filter <- firemap_zips %>% filter(state == i)
-  state_filter_code <- i
-  state_filter %>% st_write(paste0("data_geojson/firezips_",state_filter_code,".geojson"))
-}
+#for (i in statefips) {
+#  state_filter <- firemap_zips %>% filter(state == i)
+#  state_filter_code <- i
+#  state_filter %>% st_write(paste0("data_geojson/firezips_",state_filter_code,".geojson"))
+#}
 
-for (i in statefips) {
-  state_filter <- floodmap_zips %>% filter(state == i)
-  state_filter_code <- i
-  state_filter %>% st_write(paste0("data_geojson/floodzips_",state_filter_code,".geojson"))
-}
+#for (i in statefips) {
+#  state_filter <- floodmap_zips %>% filter(state == i)
+#  state_filter_code <- i
+#  state_filter %>% st_write(paste0("data_geojson/floodzips_",state_filter_code,".geojson"))
+#}
 
 

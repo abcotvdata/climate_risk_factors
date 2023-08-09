@@ -1,11 +1,13 @@
 library(tidyverse)
+library(stringr)
+library(sf)
 
 # Import the basic tables for each type of risk factor by TRACT
 # From the raw data provided by First Street Foundation via AWS
 
-fire_tract <- read_csv("raw_data/fire_v1.1_summary_fsf_fire_tract_summary.csv")
+fire_tract <- read_csv("raw_data/fire_v2.0_summary_fsf_fire_tract_summary.csv")
 heat_tract <- read_csv("raw_data/heat_v1.1_summary_fsf_heat_tract_summary.csv")
-flood_tract <- read_csv("raw_data/flood_v2.1_summary_fsf_flood_tract_summary.csv")
+flood_tract <- read_csv("raw_data/flood_v3.0_summary_fsf_flood_tract_summary.csv")
 wind_tract <- read_csv("raw_data/wind_v1.0_summary_fsf_wind_tract_summary.csv")
 
 
